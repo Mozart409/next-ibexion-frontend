@@ -19,7 +19,7 @@ RUN yarn build
 FROM node:14-alpine AS runner
 WORKDIR /app
 
-ENV NEXT_PUBLIC_STRAPI_API_URL localhost:1337
+ENV NEXT_PUBLIC_STRAPI_API_URL https://docker-strapi-ibexion.3iondl2h16bmc.eu-central-1.cs.amazonlightsail.com
 ENV NODE_ENV production
 
 RUN addgroup -g 1001 -S nodejs
