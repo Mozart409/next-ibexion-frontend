@@ -1,0 +1,49 @@
+{
+  "name": "next-ibexion-frontend",
+  "version": "0.1.7",
+  "scripts": {
+    "dev": "next",
+    "develop": "next",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "analyze": "ANALYZE=true yarn build",
+    "format": "tsc --pretty",
+    "dev:doppler": "doppler run -- yarn dev",
+    "build:doppler": "doppler run -- yarn build"
+  },
+  "dependencies": {
+    "@next/bundle-analyzer": "^11.0.0",
+    "@tailwindcss/typography": "^0.4.1",
+    "autoprefixer": "^10.2.6",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "classnames": "^2.3.1",
+    "date-fns": "2.22.1",
+    "formik": "^2.2.9",
+    "next": "^11.0.0",
+    "next-compose-plugins": "^2.2.1",
+    "next-seo": "^4.26.0",
+    "preact": "^10.5.14",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-hot-toast": "^2.0.0",
+    "react-icons": "^4.2.0",
+    "react-markdown": "^5.0.3",
+    "slugify": "^1.6.0",
+    "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.2.1",
+    "@tailwindcss/forms": "^0.3.3",
+    "@tailwindcss/line-clamp": "^0.2.1",
+    "@types/react": "^17.0.14",
+    "@types/react-dom": "^17.0.9",
+    "@typescript-eslint/eslint-plugin": "^4.28.3",
+    "eslint": "^7.31.0",
+    "eslint-config-next": "^11.0.1",
+    "postcss": "^8.3.5",
+    "tailwindcss": "^2.2.4",
+    "typescript": "^4.3.5"
+  }
+}
