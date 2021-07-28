@@ -13,13 +13,14 @@ FROM node:14-alpine AS builder
 WORKDIR /app
 COPY . .
 COPY --from=deps /app/node_modules ./node_modules
+ENV NEXT_PUBLIC_STRAPI_API_URL https://docker-strapi-ibexion.3iondl2h16bmc.eu-central-1.cs.amazonlightsail.com
 RUN yarn build
 
 # Production image, copy all the files and run next
 FROM node:14-alpine AS runner
 WORKDIR /app
 
-ENV NEXT_PUBLIC_STRAPI_API_URL https://docker-strapi-ibexion.3iondl2h16bmc.eu-central-1.cs.amazonlightsail.com
+
 ENV NODE_ENV production
 
 RUN addgroup -g 1001 -S nodejs
