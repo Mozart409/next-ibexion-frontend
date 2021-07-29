@@ -1,0 +1,21 @@
+nextIbexionFrontend:
+  component: '@sls-next/serverless-component@3.1.0'
+  inputs:
+    memory:
+      defaultLambda: 1024
+      apiLambda: 1024
+      imageLambda: 1024
+    bucketName: 'next-ibexion-frontend'
+    bucketRegion: 'eu-central-1'
+    description: 'next-ibexion-frontend lambdas'
+    build:
+      env:
+        NEXT_PUBLIC_STRAPI_API_URL: 'https://docker-strapi-ibexion.3iondl2h16bmc.eu-central-1.cs.amazonlightsail.com'
+    cloudfront:
+      defaults:
+        forward:
+          headers: [Host]
+    domain: ['ibexion.bike']
+    domainType: 'both'
+    domainRedirects:
+      www.ibexion.bike: https://ibexion.bike

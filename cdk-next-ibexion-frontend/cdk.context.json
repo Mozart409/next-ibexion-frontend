@@ -1,0 +1,12 @@
+{
+  "availability-zones:account=027930774569:region=eu-central-1": [
+    "eu-central-1a",
+    "eu-central-1b",
+    "eu-central-1c"
+  ],
+  "ami:account=027930774569:filters.image-type.0=machine:filters.name.0=amzn-ami-vpc-nat-*:filters.state.0=available:owners.0=amazon:region=eu-central-1": "ami-08ffe5c72a85c894d",
+  "hosted-zone:account=027930774569:domainName=ibexion.bike:region=eu-central-1": {
+    "Id": "/hostedzone/Z0169374182LGEZB7LVR8",
+    "Name": "ibexion.bike."
+  }
+}

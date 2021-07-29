@@ -10,7 +10,8 @@
     "analyze": "ANALYZE=true yarn build",
     "format": "tsc --pretty",
     "dev:doppler": "doppler run -- yarn dev",
-    "build:doppler": "doppler run -- yarn build"
+    "build:doppler": "doppler run -- yarn build",
+    "deploy": "set -a; source .env; serverless"
   },
   "dependencies": {
     "@next/bundle-analyzer": "^11.0.0",
