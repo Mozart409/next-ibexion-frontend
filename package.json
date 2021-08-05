@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@next/bundle-analyzer": "^11.0.0",
+    "@relative-ci/agent": "^2.0.0",
     "@tailwindcss/typography": "^0.4.1",
     "autoprefixer": "^10.2.6",
     "babel-plugin-transform-remove-console": "^6.9.4",
@@ -28,10 +29,11 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-hot-toast": "^2.0.0",
+    "react-hot-toast": "^2.1.0",
     "react-icons": "^4.2.0",
     "react-markdown": "^5.0.3",
     "slugify": "^1.6.0",
+    "webpack-stats-plugin": "^1.0.3",
     "yup": "^0.32.9"
   },
   "devDependencies": {
@@ -40,8 +42,8 @@
     "@tailwindcss/line-clamp": "^0.2.1",
     "@types/react": "^17.0.15",
     "@types/react-dom": "^17.0.9",
-    "@typescript-eslint/eslint-plugin": "^4.28.5",
-    "eslint": "^7.31.0",
+    "@typescript-eslint/eslint-plugin": "^4.29.0",
+    "eslint": "^7.32.0",
     "eslint-config-next": "^11.0.1",
     "postcss": "^8.3.5",
     "tailwindcss": "^2.2.7",
