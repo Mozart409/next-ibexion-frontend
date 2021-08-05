@@ -1,10 +1,10 @@
 {
   "name": "b9dg8rd-9usjub",
-  "hash": "S0JZMisXZ4gObSEnk685WXXIArbNfuH9zIX4hEsedsc=",
+  "hash": "133Mmg1Gqf8f3LlNWYOyl7vD8B8m7e8jdzpFkQfr5GM=",
   "description": "next-ibexion-frontend lambdas (API)",
   "memory": 1024,
   "timeout": 10,
-  "code": "/home/amadeus/GitHub/next-ibexion-frontend/.serverless_nextjs/api-lambda",
+  "code": "/Users/amadeus-macbook/GitHub/next-ibexion-frontend/.serverless_nextjs/api-lambda",
   "shims": [],
   "handler": "index.handler",
   "runtime": "nodejs12.x",

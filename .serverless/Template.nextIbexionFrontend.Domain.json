@@ -1,1 +1,13 @@
-{}
+{
+  "region": "us-east-1",
+  "privateZone": false,
+  "domain": "ibexion.bike",
+  "subdomains": [
+    {
+      "domain": "www.ibexion.bike",
+      "distributionId": "E2QT8CPZRZZAYD",
+      "url": "https://d1zb1qcn3dz9lh.cloudfront.net",
+      "type": "awsCloudFront"
+    }
+  ]
+}

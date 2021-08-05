@@ -1,10 +1,10 @@
 {
   "name": "b9dg8rd-vj1xbl",
-  "hash": "0OBuUtHuwejxZFmaN1v6tvzEUmx43PAkEdB4AFj4XU4=",
+  "hash": "+LeBQFuM9xDHrRh/vmPw84HB1awX6bDL8mjBaDKIbEo=",
   "description": "next-ibexion-frontend lambdas (Image)",
   "memory": 1024,
   "timeout": 10,
-  "code": "/home/amadeus/GitHub/next-ibexion-frontend/.serverless_nextjs/image-lambda",
+  "code": "/Users/amadeus-macbook/GitHub/next-ibexion-frontend/.serverless_nextjs/image-lambda",
   "shims": [],
   "handler": "index.handler",
   "runtime": "nodejs12.x",
