@@ -1,3 +1,5 @@
 {
-  "components": {}
+  "components": {
+    "nextIbexionFrontend": "/Users/amadeus-macbook/.serverless/components/registry/npm/@sls-next/serverless-component@3.1.0/node_modules/@sls-next/serverless-component"
+  }
 }

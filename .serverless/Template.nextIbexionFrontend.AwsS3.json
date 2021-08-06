@@ -1,1 +1,6 @@
-{}
+{
+  "name": "next-ibexion-frontend",
+  "region": "eu-central-1",
+  "accelerated": true,
+  "url": "https://next-ibexion-frontend.s3.amazonaws.com"
+}

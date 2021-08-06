@@ -2,7 +2,8 @@ const withPlugins = require('next-compose-plugins')
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
-
+const { StatsWriterPlugin } = require('webpack-stats-plugin')
+const { RelativeCiAgentWebpackPlugin } = require('@relative-ci/agent')
 const nextConfig = {
   env: {
     NEXT_PUBLIC_STRAPI_API_URL: process.env.NEXT_PUBLIC_STRAPI_API_URL,
@@ -23,15 +24,30 @@ const nextConfig = {
   },
 
   webpack: (config, { dev, isServer }) => {
-    // Replace React with Preact only in client production build
     if (!dev && !isServer) {
-      Object.assign(config.resolve.alias, {
-        react: 'preact/compat',
-        'react-dom/test-utils': 'preact/test-utils',
-        'react-dom': 'preact/compat',
-      })
+      config.plugins.push(
+        new RelativeCiAgentWebpackPlugin({
+          stats: { excludeAssets: [/stats.json/] },
+        })
+      ),
+        Object.assign(config.resolve.alias, {
+          react: 'preact/compat',
+          'react-dom/test-utils': 'preact/test-utils',
+          'react-dom': 'preact/compat',
+        })
     }
-
+    config.plugins.push(
+      new StatsWriterPlugin({
+        filename: 'stats.json',
+        stats: {
+          context: './', // optional, will improve readability of the paths
+          assets: true,
+          entrypoints: true,
+          chunks: true,
+          modules: true,
+        },
+      })
+    )
     return config
   },
 }
