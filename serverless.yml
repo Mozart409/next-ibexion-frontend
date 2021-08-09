@@ -11,4 +11,3 @@ nextIbexionFrontend:
     build:
       env:
         NEXT_PUBLIC_STRAPI_API_URL: 'https://docker-strapi-ibexion.3iondl2h16bmc.eu-central-1.cs.amazonlightsail.com'
-    domain: 'ibexion.bike'
