@@ -8,6 +8,7 @@ const nextConfig = {
   env: {
     NEXT_PUBLIC_STRAPI_API_URL: process.env.NEXT_PUBLIC_STRAPI_API_URL,
   },
+
   webpack5: true,
   images: {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
@@ -16,6 +17,7 @@ const nextConfig = {
       'localhost',
       'cms.ibexion.de',
       'ibexion-strapi-image-upload-bucket.s3.eu-central-1.amazonaws.com',
+      'https://docker-strapi-ibexion.3iondl2h16bmc.eu-central-1.cs.amazonlightsail.com',
     ],
   },
 
@@ -23,7 +25,7 @@ const nextConfig = {
     return []
   },
 
-  webpack: (config, { dev, isServer }) => {
+  /*   webpack: (config, { dev, isServer }) => {
     if (!dev && !isServer) {
       config.plugins.push(
         new RelativeCiAgentWebpackPlugin({
@@ -49,7 +51,7 @@ const nextConfig = {
       })
     )
     return config
-  },
+  }, */
 }
 module.exports = withPlugins(
   [
