@@ -1,6 +1,6 @@
 {
   "name": "next-ibexion-frontend",
-  "version": "0.1.7",
+  "version": "0.3.6",
   "scripts": {
     "dev": "next",
     "develop": "next",
