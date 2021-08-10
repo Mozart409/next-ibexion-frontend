@@ -3,6 +3,12 @@ name: Continuous deploy
 on:
   push:
     branches: [master]
+  workflow_dispatch:
+
+  # Allows external webhook trigger
+  repository_dispatch:
+    types:
+      - webhook
 
 jobs:
   serverless-deploy:
