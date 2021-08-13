@@ -39,6 +39,7 @@ const TestimonialsGroup = ({ data }) => {
               {selectedTestimonial?.authorTitle}
             </p>
           </div>
+
           <CustomLink
             link={{
               url: selectedTestimonial?.link,
@@ -49,7 +50,7 @@ const TestimonialsGroup = ({ data }) => {
               id: 0,
             }}
           >
-            <span className="uppercase tracking-wide text-blue-700 hover:underline  with-arrow sm:self-end mt-6 sm:mt-0">
+            <span className="uppercase tracking-wide text-blue-700 hover:underline with-arrow sm:self-end mt-6 sm:mt-0">
               Read story
             </span>
           </CustomLink>

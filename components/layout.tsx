@@ -16,7 +16,7 @@ const Layout: React.FC = ({ children, global }: Props) => {
   const [bannerIsShown, setBannerIsShown] = useState(true)
 
   return (
-    <div className="flex flex-col justify-between min-h-screen font-sans antialiased">
+    <div className="flex flex-col justify-between min-h-screen font-sans antialiased bg-black-dark">
       {/* Aligned to the top */}
       <div className="flex-1">
         {notificationBanner && bannerIsShown && (

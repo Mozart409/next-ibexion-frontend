@@ -5,8 +5,6 @@ const LevelRow = ({ data: { id, title, titleColor, content } }) => {
     <div key={id}>
       <div className="mt-8 max-w-prose mx-auto">
         <ul className="py-4 max-w-prose mx-auto">
-          {/*  {console.log({ id, title, content })} */}
-
           <li className="list-check list-inside align-baseline">
             <span
               className={cx(
@@ -17,7 +15,7 @@ const LevelRow = ({ data: { id, title, titleColor, content } }) => {
                   'from-yellow-300 to-green-500': titleColor === 'yellow',
                   'from-cyan-500 to-green-300': titleColor === 'blue',
                   'from-red-600 to-yellow-300': titleColor === 'red',
-                  'text-black': !titleColor,
+                  'text-gray-200': !titleColor,
                 }
               )}
             >
@@ -28,7 +26,7 @@ const LevelRow = ({ data: { id, title, titleColor, content } }) => {
           <div>
             <div className="lg:ml-10 max-w-prose prose prose-sm lg:prose md:max-w-3xl mx-auto">
               <div className="break-words prose prose-sm lg:prose-lg ">
-                <MarkdownRender white={false}>{content}</MarkdownRender>
+                <MarkdownRender>{content}</MarkdownRender>
               </div>
             </div>
           </div>

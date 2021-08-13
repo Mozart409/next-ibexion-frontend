@@ -5,14 +5,53 @@ module.exports = {
   darkMode: false,
   theme: {
     extend: {
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            color: theme('colors.gray.300'),
+            strong: {
+              color: theme('colors.gray.200'),
+            },
+            a: {
+              color: '#3182ce',
+              '&:hover': {
+                color: '#2c5282',
+              },
+            },
+            h1: {
+              color: theme('colors.gray.100'),
+            },
+            h2: {
+              color: theme('colors.gray.100'),
+            },
+            h3: {
+              color: theme('colors.gray.200'),
+            },
+            h4: {
+              color: theme('colors.gray.300'),
+            },
+            h5: {
+              color: theme('colors.gray.300'),
+            },
+            h6: {
+              color: theme('colors.gray.300'),
+            },
+          },
+        },
+      }),
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        primary: colors.pink,
+        primary: colors.gray,
         cyan: colors.cyan,
         yellow: colors.amber,
         orange: colors.orange,
+        black: {
+          light: '#737373',
+          DEFAULT: '#404040',
+          dark: '#171717',
+        },
       },
       container: {
         center: true,

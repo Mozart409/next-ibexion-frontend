@@ -15,7 +15,7 @@ const Navbar = ({ navbar }) => {
   return (
     <>
       {/* The actual navbar */}
-      <nav className="border-gray-200 border-b-2 py-6 sm:py-2">
+      <nav className="bg-white border-gray-200 border-b-2 py-6 sm:py-2">
         <div className="container flex flex-row items-center justify-between">
           {/* Content aligned to the left */}
           <div className="flex flex-row items-center">
@@ -23,7 +23,7 @@ const Navbar = ({ navbar }) => {
               <a>
                 <CustomImage
                   media={navbar?.logo}
-                  className="h-8 w-auto object-contain"
+                  className="h-8 w-auto object-contain rounded-full"
                   width={64}
                   height={64}
                 />
@@ -34,7 +34,7 @@ const Navbar = ({ navbar }) => {
               {navbar.links.map((navLink) => (
                 <li key={navLink.id}>
                   <CustomLink link={navLink}>
-                    <div className="hover:text-gray-900 px-2 py-1">
+                    <div className="hover:text-gray-500 px-2 py-1">
                       {navLink?.text}
                     </div>
                   </CustomLink>

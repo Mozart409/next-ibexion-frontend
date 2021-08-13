@@ -19,7 +19,7 @@ const MobileNavMenu = ({ navbar, closeSelf }) => {
           {/* Company logo */}
           <CustomImage
             media={navbar?.logo}
-            className="h-8 w-auto object-contain"
+            className="h-8 w-auto object-contain rounded-full"
             width={16}
             height={16}
           />

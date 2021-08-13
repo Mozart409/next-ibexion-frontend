@@ -3,7 +3,7 @@ import Link, { LinkProps } from 'next/link'
 import ReactMarkdown from 'react-markdown'
 import slugify from 'slugify'
 import cx from 'classnames'
-
+import PropTypes from 'prop-types'
 import * as React from 'react'
 
 const MarkdownRender = ({ children, white }) => {
@@ -103,10 +103,7 @@ const MarkdownRender = ({ children, white }) => {
   return (
     <div>
       <ReactMarkdown
-        className={cx('mx-auto break-words prose-sm lg:prose-lg', {
-          'prose-white': white,
-          prose: !white,
-        })}
+        className="mx-auto break-words prose-sm lg:prose-lg prose"
         skipHtml={true}
         renderers={customRender}
       >
@@ -114,6 +111,14 @@ const MarkdownRender = ({ children, white }) => {
       </ReactMarkdown>
     </div>
   )
+}
+
+MarkdownRender.propTypes = {
+  white: PropTypes.bool,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
 }
 
 export default MarkdownRender
