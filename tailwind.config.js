@@ -1,15 +1,7 @@
 const colors = require('tailwindcss/colors')
 const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
-  purge: {
-    content: ['./components/**/*.js', './pages/**/*.js'],
-    options: {
-      safelist: ['bg-black-dark', 'bg-black-light', 'bg-black-dark'],
-      blocklist: [/^debug-/],
-      keyframes: true,
-      fontFace: true,
-    },
-  },
+  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: false,
   theme: {
     extend: {
@@ -21,9 +13,9 @@ module.exports = {
               color: theme('colors.gray.200'),
             },
             a: {
-              color: '#3182ce',
+              color: theme('colors.gray.100'),
               '&:hover': {
-                color: '#2c5282',
+                color: theme('colors.gray.300'),
               },
             },
             h1: {
@@ -55,11 +47,7 @@ module.exports = {
         cyan: colors.cyan,
         yellow: colors.amber,
         orange: colors.orange,
-        black: {
-          light: '#737373',
-          DEFAULT: '#404040',
-          dark: '#171717',
-        },
+        trueGray: colors.trueGray,
       },
       container: {
         center: true,

@@ -1,5 +1,6 @@
 import cx from 'classnames'
 import MarkdownRender from 'utils/MarkdownRender'
+
 const LevelRow = ({ data: { id, title, titleColor, content } }) => {
   return (
     <div key={id}>
@@ -24,10 +25,8 @@ const LevelRow = ({ data: { id, title, titleColor, content } }) => {
           </li>
 
           <div>
-            <div className="lg:ml-10 max-w-prose prose prose-sm lg:prose md:max-w-3xl mx-auto">
-              <div className="break-words prose prose-sm lg:prose-lg ">
-                <MarkdownRender>{content}</MarkdownRender>
-              </div>
+            <div className="lg:ml-10 max-w-prose md:max-w-3xl mx-auto">
+              <MarkdownRender>{content}</MarkdownRender>
             </div>
           </div>
         </ul>

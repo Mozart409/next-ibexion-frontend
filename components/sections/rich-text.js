@@ -3,7 +3,7 @@ import MarkdownRender from 'utils/MarkdownRender'
 
 const RichText = ({ data }) => {
   return (
-    <div className="prose prose-lg container py-12">
+    <div className="prose container py-12">
       <MarkdownRender>{data.content}</MarkdownRender>
     </div>
   )
