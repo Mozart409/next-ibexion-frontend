@@ -1,7 +1,15 @@
 const colors = require('tailwindcss/colors')
 const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
-  purge: ['./components/**/*.js', './pages/**/*.js'],
+  purge: {
+    content: ['./components/**/*.js', './pages/**/*.js'],
+    options: {
+      safelist: ['bg-black-dark', 'bg-black-light', 'bg-black-dark'],
+      blocklist: [/^debug-/],
+      keyframes: true,
+      fontFace: true,
+    },
+  },
   darkMode: false,
   theme: {
     extend: {
