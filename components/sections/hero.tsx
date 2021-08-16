@@ -5,15 +5,19 @@ import { getButtonAppearance } from 'utils/button'
 
 const Hero = ({ data }) => {
   return (
-    <main className="container flex flex-col md:flex-row items-center justify-between py-12">
+    <main className="container grid grid-flow-row-dense md:grid-flow-col grid-cols-4 md:grid-cols-8 gap-4 items-center justify-between py-12">
       {/* Left column for content */}
-      <div className="flex-1 sm:pr-8">
+      <div className="col-span-4 ">
         {/* Hero section label */}
-        <p className="uppercase tracking-wide font-semibold">{data.label}</p>
+        <p className="uppercase tracking-wide font-semibold text-gray-200">
+          {data.label}
+        </p>
         {/* Big title */}
-        <h1 className="title mt-2 sm:mt-0 mb-4 sm:mb-2">{data.title}</h1>
+        <h1 className="title mt-2 sm:mt-0 mb-4 sm:mb-2 text-gray-50">
+          {data.title}
+        </h1>
         {/* Description paragraph */}
-        <p className="text-xl mb-6">{data.description}</p>
+        <p className="text-xl mb-6 text-gray-300">{data.description}</p>
         {/* Buttons row */}
         <div className="flex flex-row flex-wrap gap-4">
           {data.buttons.map((button) => (
@@ -29,11 +33,16 @@ const Hero = ({ data }) => {
           <MarkdownRender>{data.smallTextWithLink}</MarkdownRender>
         </div>
       </div>
+
       {/* Right column for the image */}
-      <CustomImage
-        media={data?.picture}
-        className="flex-shrink-0 object-contain w-full md:w-6/12 mt-6 md:mt-0"
-      />
+      <div className="col-span-4">
+        <CustomImage
+          media={data?.picture}
+          width={750}
+          height={650}
+          className="flex-shrink-0 object-contain w-full sm:w-3/12 md:w-5/12 mt-6 md:mt-0"
+        />
+      </div>
     </main>
   )
 }

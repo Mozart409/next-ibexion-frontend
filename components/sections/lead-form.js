@@ -17,7 +17,7 @@ const LeadForm = ({ data }) => {
   })
 
   return (
-    <div className="py-10 text-center">
+    <div className="py-10 text-center bg-gray-100">
       <h2 className="text-3xl mb-10 font-bold">{data.title}</h2>
       <div className="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
         <div className="max-w-xl mx-auto">
