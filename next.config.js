@@ -23,7 +23,7 @@ const nextConfig = {
     return []
   },
 
-  /*   webpack: (config, { dev, isServer }) => {
+  webpack: (config, { dev, isServer }) => {
     if (!dev && !isServer) {
       config.plugins.push(
         new RelativeCiAgentWebpackPlugin({
@@ -49,7 +49,7 @@ const nextConfig = {
       })
     )
     return config
-  }, */
+  },
 }
 module.exports = withPlugins(
   [
