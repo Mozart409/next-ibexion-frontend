@@ -11,6 +11,7 @@ export default class MyDocument extends Document {
             src="https://app.usercentrics.eu/browser-ui/latest/bundle.js"
             defer
           ></script>
+
           <script
             data-usercentrics="Google Tag Manager"
             type="text/plain"
@@ -26,6 +27,14 @@ export default class MyDocument extends Document {
               `,
             }}
           />
+
+          <link rel="preload" href="/fonts/inter-var-latin.woff2"></link>
+
+          <link
+            rel="preconnect"
+            href="https://aggregator.service.usercentrics.eu"
+          ></link>
+          <link rel="preconnect" href="https://api.usercentrics.eu"></link>
         </Head>
 
         <body>

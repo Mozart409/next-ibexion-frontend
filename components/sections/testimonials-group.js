@@ -2,6 +2,7 @@ import classNames from 'classnames'
 import { useState } from 'react'
 import CustomImage from '../elements/image'
 import CustomLink from '../elements/custom-link'
+import slugify from 'slugify'
 
 const TestimonialsGroup = ({ data }) => {
   // Only show one testimonial at a time
@@ -10,7 +11,15 @@ const TestimonialsGroup = ({ data }) => {
 
   return (
     <section className="text-center text-lg bg-gray-200 pt-12 pb-16">
-      <h2 className="title mb-4">{data.title}</h2>
+      <h2
+        id={slugify(`${data.title}`, {
+          lower: true,
+          locale: 'de',
+        })}
+        className="title mb-4"
+      >
+        {data.title}
+      </h2>
       <p className="text-gray-700 mb-4">{data.description}</p>
       <CustomLink link={data.link}>
         <span className="with-arrow text-blue-700 hover:underline">
