@@ -1,9 +1,9 @@
 type SendGpxData = {
-  GPXDaten: string
-  Fahrergewicht: number
-  Bikegewicht: number
-  Fahrerleistung: number
-  Bikeleistung: number
+  gPXDaten: string
+  fahrergewicht: number
+  bikegewicht: number
+  fahrerleistung: number
+  bikeleistung: number
 }
 
 type ResponseGpxData = {

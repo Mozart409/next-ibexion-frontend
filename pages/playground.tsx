@@ -1,12 +1,12 @@
 import React from 'react'
 import { NextPage, GetStaticProps } from 'next'
-import GpxForm from '@/components/sections/gpx-form'
+import GpxReactForm from '@/components/sections/gpx-react-form'
 
 const Playground: NextPage<PlaygroundProps> = () => {
   return (
     <div>
       <h1>Playground</h1>
-      <GpxForm />
+      <GpxReactForm />
     </div>
   )
 }
