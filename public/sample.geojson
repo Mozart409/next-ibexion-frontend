@@ -1,0 +1,329 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "CB22",
+        "cmt": "Cross Street is GREEENBROOK PKWY",
+        "desc": "Monument named CB22 is located at cross street BERKMAN DRIVE",
+        "type": "Control Point Monument",
+        "sym": "MONUMENT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.6980708376808,
+          30.3050490359459,
+          595.3
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "CB25",
+        "cmt": "Cross Street is CREEKWOOD ROAD",
+        "desc": "Monument named CB25 is located at cross street MANOR ROAD",
+        "type": "Control Point Monument",
+        "sym": "MONUMENT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.6877878132789,
+          30.2963590870264,
+          554.84
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "CB21",
+        "cmt": "Cross Street is NORTHRIDGE DRIVE",
+        "desc": "Monument named CB21 is located at cross street BERKMAN DRIVE",
+        "type": "Control Point Monument",
+        "sym": "MONUMENT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.6939134831474,
+          30.3116541467477,
+          609.93
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "CB26",
+        "cmt": "Cross Street is PECAN SPRINGS ROAD",
+        "desc": "Monument named CB26 is located at cross street SPRINGDALE ROAD",
+        "type": "Control Point Monument",
+        "sym": "MONUMENT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.679319450491,
+          30.2911184644927,
+          527.87
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "M-25-4002",
+        "cmt": "Cross Street is PENDLETON LANE",
+        "desc": "Monument named M-25-4002 is located at cross street TIPTON DRIVE",
+        "type": "Control Point Monument",
+        "sym": "MONUMENT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.6777691731691,
+          30.2991749567645,
+          582.61
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "M-25-4003",
+        "cmt": "Cross Street is NORWOOD HILL ROAD",
+        "desc": "Monument named M-25-4003 is located at cross street MEDFORD DRIVE",
+        "type": "Control Point Monument",
+        "sym": "MONUMENT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.6796352690245,
+          30.2982436284604,
+          565.06
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "CB23",
+        "cmt": "Cross Street is ",
+        "desc": "Monument named CB23 is located at cross street DESTROYED",
+        "type": "Control Point Monument",
+        "sym": "MONUMENT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.6854905342584,
+          30.3005399176698,
+          566.91
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "M-26-3001",
+        "cmt": "Cross Street is ",
+        "desc": "Monument named M-26-3001 is located at cross street AUBURNHILL DRIVE",
+        "type": "Control Point Monument",
+        "sym": "MONUMENT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.6757365218111,
+          30.313835324959,
+          542.92
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "M-26-3002",
+        "cmt": "Cross Street is ",
+        "desc": "Monument named M-26-3002 is located at cross street AUBURNHILL DRIVE",
+        "type": "Control Point Monument",
+        "sym": "MONUMENT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.6752957563268,
+          30.3135544480705,
+          545.09
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "M-26-3003",
+        "cmt": "Cross Street is ",
+        "desc": "Monument named M-26-3003 is located at cross street AUBURNHILL DRIVE",
+        "type": "Control Point Monument",
+        "sym": "MONUMENT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.6756490714832,
+          30.3137738835303,
+          543.01
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "M-26-3004",
+        "cmt": "Cross Street is ",
+        "desc": "Monument named M-26-3004 is located at cross street AUBURNHILL DRIVE",
+        "type": "Control Point Monument",
+        "sym": "MONUMENT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.6751605482993,
+          30.3133382693001,
+          544.38
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "L-24-1002",
+        "cmt": "Cross Street is SCHIEFFER AVE.",
+        "desc": "Monument named L-24-1002 is located at cross street AIRPORT BLVD.",
+        "type": "Control Point Monument",
+        "sym": "MONUMENT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7079956198969,
+          30.2933980072791,
+          586.07
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "L-24-1001",
+        "cmt": "Cross Street is SCHIEFFER AVE.",
+        "desc": "Monument named L-24-1001 is located at cross street AIRPORT BLVD.",
+        "type": "Control Point Monument",
+        "sym": "MONUMENT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7082614652738,
+          30.2953919124519,
+          599.08
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "L-24-3001",
+        "cmt": "Cross Street is E. M. FRANKLIN",
+        "desc": "Monument named L-24-3001 is located at cross street MANOR RD.",
+        "type": "Control Point Monument",
+        "sym": "MONUMENT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.6981724823356,
+          30.2891750393722,
+          590.29
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "L-24-3002",
+        "cmt": "Cross Street is E. M. FRANKLIN",
+        "desc": "Monument named L-24-3002 is located at cross street MANOR RD.",
+        "type": "Control Point Monument",
+        "sym": "MONUMENT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.6951349534262,
+          30.290074462363,
+          583.93
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "L-25-1001",
+        "cmt": "Cross Street is BERKMAN DR.",
+        "desc": "Monument named L-25-1001 is located at cross street EAST 51ST ST.",
+        "type": "Control Point Monument",
+        "sym": "MONUMENT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7032269847679,
+          30.3060699310819,
+          621.77
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "L-25-3001",
+        "cmt": "Cross Street is BERKMAN DR.",
+        "desc": "Monument named L-25-3001 is located at cross street EAST 51ST ST.",
+        "type": "Control Point Monument",
+        "sym": "MONUMENT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.6978346172105,
+          30.3032781640973,
+          603.68
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "K-25-2002",
+        "cmt": "Cross Street is EAST 51ST ST",
+        "desc": "Monument named K-25-2002 is located at cross street INTERSTATE 35",
+        "type": "Control Point Monument",
+        "sym": "MONUMENT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7102778415234,
+          30.308420370191,
+          644.01
+        ]
+      }
+    }
+  ]
+}

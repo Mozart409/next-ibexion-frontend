@@ -49,12 +49,39 @@ const GpxForm = () => {
     },
   })
   const onSubmit = (data) => {
-    console.log(data)
-    toast.success(data)
+    console.log(JSON.stringify(data, null, 2))
+    toast.success(JSON.stringify(data, null, 2))
   }
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
+      <div>
+        <label
+          htmlFor="gPXDaten"
+          className="block text-sm font-medium text-gray-700"
+        >
+          gPXDaten
+        </label>
+        <div className="mt-1">
+          <input
+            type="text"
+            id="gPXDaten"
+            className="block w-full rounded-md border-gray-300 shadow-sm sm:text-sm focus:ring-primary-500 focus:border-primary-500"
+            {...register('gPXDaten', {})}
+          />
+          {errors.gPXDaten && (
+            <ErrorMessage
+              errors={errors}
+              name="gPXDaten"
+              as="span"
+              render={({ message }) => (
+                <ErrorMessageCustom>{message}</ErrorMessageCustom>
+              )}
+            />
+          )}
+        </div>
+      </div>
+
       <div>
         <label
           htmlFor="fahrergewicht"
@@ -72,7 +99,7 @@ const GpxForm = () => {
           {errors.fahrergewicht && (
             <ErrorMessage
               errors={errors}
-              name="bikegewicht"
+              name="fahrergewicht"
               as="span"
               render={({ message }) => (
                 <ErrorMessageCustom>{message}</ErrorMessageCustom>
@@ -100,6 +127,60 @@ const GpxForm = () => {
             <ErrorMessage
               errors={errors}
               name="bikegewicht"
+              as="span"
+              render={({ message }) => (
+                <ErrorMessageCustom>{message}</ErrorMessageCustom>
+              )}
+            />
+          )}
+        </div>
+      </div>
+
+      <div>
+        <label
+          htmlFor="fahrerleistung"
+          className="block text-sm font-medium text-gray-700"
+        >
+          Fahrerleistung
+        </label>
+        <div className="mt-1">
+          <input
+            type="number"
+            id="fahrerleistung"
+            className="block w-full rounded-md border-gray-300 shadow-sm sm:text-sm focus:ring-primary-500 focus:border-primary-500"
+            {...register('fahrerleistung', {})}
+          />
+          {errors.fahrerleistung && (
+            <ErrorMessage
+              errors={errors}
+              name="fahrerleistung"
+              as="span"
+              render={({ message }) => (
+                <ErrorMessageCustom>{message}</ErrorMessageCustom>
+              )}
+            />
+          )}
+        </div>
+      </div>
+
+      <div>
+        <label
+          htmlFor="bikeleistung"
+          className="block text-sm font-medium text-gray-700"
+        >
+          Bikeleistung
+        </label>
+        <div className="mt-1">
+          <input
+            type="number"
+            id="bikegewicht"
+            className="block w-full rounded-md border-gray-300 shadow-sm sm:text-sm focus:ring-primary-500 focus:border-primary-500"
+            {...register('bikeleistung', {})}
+          />
+          {errors.bikeleistung && (
+            <ErrorMessage
+              errors={errors}
+              name="bikeleistung"
               as="span"
               render={({ message }) => (
                 <ErrorMessageCustom>{message}</ErrorMessageCustom>
