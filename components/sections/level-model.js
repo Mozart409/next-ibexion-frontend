@@ -6,11 +6,11 @@ const LevelModel = ({ data }) => {
     <div>
       <div className="py-6 mx-auto text-center lg:text-left">
         <div className="px-4 sm:px-8">
-          <div className="mx-auto mb-4 ">
-            <div className="mx-auto break-words max-w-prose md:mt-5 md:max-w-3xl">
+          <div className="mx-auto mb-4">
+            <div className="mx-auto max-w-prose break-words md:mt-5 md:max-w-3xl">
               <MarkdownRender>{data.title}</MarkdownRender>
             </div>
-            <div className="mx-auto break-words max-w-prose md:mt-5 md:max-w-3xl">
+            <div className="mx-auto max-w-prose break-words md:mt-5 md:max-w-3xl">
               <MarkdownRender>{data.content}</MarkdownRender>
             </div>
           </div>

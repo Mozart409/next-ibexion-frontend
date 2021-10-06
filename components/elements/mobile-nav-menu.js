@@ -12,31 +12,31 @@ const MobileNavMenu = ({ navbar, closeSelf }) => {
   useLockBodyScroll()
 
   return (
-    <div className="w-screen h-screen fixed top-0 left-0 overflow-y-scroll bg-white z-10 pb-6">
+    <div className="overflow-y-scroll fixed top-0 left-0 z-10 pb-6 w-screen h-screen bg-white">
       <div className="container flex flex-col justify-between">
         {/* Top section */}
-        <div className="flex flex-row justify-between py-2 items-center">
+        <div className="flex flex-row justify-between items-center py-2">
           {/* Company logo */}
           <CustomImage
             media={navbar?.logo}
-            className="h-8 w-auto object-contain rounded-full"
+            className="object-contain w-auto h-8 rounded-full"
             width={16}
             height={16}
           />
           {/* Close button */}
           <button onClick={closeSelf} className="py-1 px-1">
-            <MdClose className="h-8 w-auto" />
+            <MdClose className="w-auto h-8" />
           </button>
         </div>
         {/* Bottom section */}
-        <div className="flex flex-col justify-end w-9/12 mx-auto">
-          <ul className="flex flex-col list-none gap-6 items-baseline text-xl mb-10">
+        <div className="flex flex-col justify-end mx-auto w-9/12">
+          <ul className="flex flex-col gap-6 items-baseline mb-10 text-xl list-none">
             {navbar.links.map((navLink) => (
               <li onClick={closeSelf} key={navLink.id} className="block w-full">
                 <CustomLink link={navLink}>
-                  <div className="hover:text-gray-900 py-6 flex flex-row justify-between items-center">
+                  <div className="flex flex-row justify-between items-center py-6 hover:text-gray-900">
                     <span>{navLink?.text}</span>
-                    <MdChevronRight className="h-8 w-auto" />
+                    <MdChevronRight className="w-auto h-8" />
                   </div>
                 </CustomLink>
               </li>

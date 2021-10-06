@@ -5,19 +5,19 @@ import { getButtonAppearance } from 'utils/button'
 
 const Hero = ({ data }) => {
   return (
-    <main className="container grid grid-flow-row-dense md:grid-flow-col grid-cols-4 md:grid-cols-8 gap-4 items-center justify-between py-12">
+    <main className="container grid grid-cols-4 grid-flow-row-dense gap-4 justify-between items-center py-12 md:grid-cols-8 md:grid-flow-col">
       {/* Left column for content */}
-      <div className="col-span-4 ">
+      <div className="col-span-4">
         {/* Hero section label */}
-        <p className="uppercase tracking-wide font-semibold text-gray-200">
+        <p className="font-semibold tracking-wide text-gray-200 uppercase">
           {data.label}
         </p>
         {/* Big title */}
-        <h1 className="title mt-2 sm:mt-0 mb-4 sm:mb-2 text-gray-50">
+        <h1 className="mt-2 mb-4 text-gray-50 sm:mt-0 sm:mb-2 title">
           {data.title}
         </h1>
         {/* Description paragraph */}
-        <p className="text-xl mb-6 text-gray-300">{data.description}</p>
+        <p className="mb-6 text-xl text-gray-300">{data.description}</p>
         {/* Buttons row */}
         <div className="flex flex-row flex-wrap gap-4">
           {data.buttons.map((button) => (
@@ -29,7 +29,7 @@ const Hero = ({ data }) => {
           ))}
         </div>
         {/* Small rich text */}
-        <div className="text-base md:text-sm mt-4 sm:mt-3 rich-text-hero">
+        <div className="mt-4 text-base sm:mt-3 md:text-sm rich-text-hero">
           <MarkdownRender>{data.smallTextWithLink}</MarkdownRender>
         </div>
       </div>
@@ -40,7 +40,7 @@ const Hero = ({ data }) => {
           media={data?.picture}
           width={750}
           height={650}
-          className="flex-shrink-0 object-contain w-full sm:w-3/12 md:w-5/12 mt-6 md:mt-0"
+          className="object-contain flex-shrink-0 mt-6 w-full sm:w-3/12 md:mt-0 md:w-5/12"
         />
       </div>
     </main>

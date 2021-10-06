@@ -11,26 +11,26 @@ const Footer = ({ footer }) => {
           {footer.logo && (
             <CustomImage
               media={footer?.logo}
-              className="h-8 w-auto object-contain"
+              className="object-contain w-auto h-8"
               width={64}
               height={64}
             />
           )}
         </div>
-        <nav className="flex flex-wrap flex-row lg:gap-20 items-start lg:justify-end mb-10">
+        <nav className="flex flex-row flex-wrap items-start mb-10 lg:gap-20 lg:justify-end">
           {footer.columns.map((footerColumn) => (
             <div
               key={footerColumn.id}
-              className="mt-10 lg:mt-0 w-6/12 lg:w-auto"
+              className="mt-10 w-6/12 lg:mt-0 lg:w-auto"
             >
-              <p className="uppercase tracking-wide font-semibold text-gray-300">
+              <p className="font-semibold tracking-wide text-gray-300 uppercase">
                 {footerColumn.title}
               </p>
               <ul className="mt-2">
                 {footerColumn.links.map((link) => (
                   <li
                     key={link.id}
-                    className="text-gray-400 py-1 px-1 -mx-1 hover:text-gray-600"
+                    className="py-1 px-1 -mx-1 text-gray-400 hover:text-gray-600"
                   >
                     <CustomLink link={link}>{link?.text}</CustomLink>
                   </li>
@@ -40,7 +40,7 @@ const Footer = ({ footer }) => {
           ))}
         </nav>
       </div>
-      <div className="text-sm bg-gray-900 py-6 text-gray-400">
+      <div className="py-6 text-sm text-gray-400 bg-gray-900">
         <div className="container">
           {new Date().getFullYear()} {footer.smallText}
         </div>

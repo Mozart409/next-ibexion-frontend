@@ -4,9 +4,9 @@ import MarkdownRender from 'utils/MarkdownRender'
 const LevelRow = ({ data: { id, title, titleColor, content } }) => {
   return (
     <div key={id}>
-      <div className="mt-8 max-w-prose mx-auto">
-        <ul className="py-4 max-w-prose mx-auto">
-          <li className="list-check list-inside align-baseline">
+      <div className="mx-auto mt-8 max-w-prose">
+        <ul className="py-4 mx-auto max-w-prose">
+          <li className="list-inside align-baseline list-check">
             <span
               className={cx(
                 'font-bold text-transparent bg-clip-text bg-gradient-to-r text-2xl text-left',
@@ -25,7 +25,7 @@ const LevelRow = ({ data: { id, title, titleColor, content } }) => {
           </li>
 
           <div>
-            <div className="lg:ml-10 max-w-prose md:max-w-3xl mx-auto">
+            <div className="mx-auto max-w-prose md:max-w-3xl lg:ml-10">
               <MarkdownRender>{content}</MarkdownRender>
             </div>
           </div>

@@ -10,38 +10,38 @@ const TestimonialsGroup = ({ data }) => {
   const selectedTestimonial = data.testimonials[selectedTestimonialIndex]
 
   return (
-    <section className="text-center text-lg bg-gray-200 pt-12 pb-16">
+    <section className="pt-12 pb-16 text-lg text-center bg-gray-200">
       <h2
         id={slugify(`${data.title}`, {
           lower: true,
           locale: 'de',
         })}
-        className="title mb-4"
+        className="mb-4 title"
       >
         {data.title}
       </h2>
-      <p className="text-gray-700 mb-4">{data.description}</p>
+      <p className="mb-4 text-gray-700">{data.description}</p>
       <CustomLink link={data.link}>
-        <span className="with-arrow text-blue-700 hover:underline">
+        <span className="text-blue-700 hover:underline with-arrow">
           {data.link?.text}
         </span>
       </CustomLink>
       {/* Current testimonial card */}
-      <div className="max-w-5xl w-8/12 sm:w-8/12 bg-white shadow-md sm:shadow-xl mx-auto flex flex-col sm:flex-row mt-10 text-left">
+      <div className="flex flex-col mx-auto mt-10 w-8/12 max-w-5xl text-left bg-white shadow-md sm:flex-row sm:w-8/12 sm:shadow-xl">
         <CustomImage
           media={selectedTestimonial?.picture}
-          className="w-full md:w-4/12 object-cover flex-shrink-0"
+          className="object-cover flex-shrink-0 w-full md:w-4/12"
         />
-        <div className="px-4 py-4 sm:px-12 sm:pt-12 sm:pb-4 flex flex-col justify-between">
+        <div className="flex flex-col justify-between py-4 px-4 sm:px-12 sm:pt-12 sm:pb-4">
           <div>
             <CustomImage
               media={selectedTestimonial?.logo}
-              className="h-8 w-auto mb-6 sm:mb-10 mt-2 sm:mt-0"
+              className="mt-2 mb-6 w-auto h-8 sm:mt-0 sm:mb-10"
             />
-            <p className="italic mb-6">
+            <p className="mb-6 italic">
               &rdquo;{selectedTestimonial?.text}&rdquo;
             </p>
-            <p className="font-bold text-base sm:text-sm">
+            <p className="text-base font-bold sm:text-sm">
               {selectedTestimonial?.authorName}
             </p>
             <p className="text-base sm:text-sm">
@@ -59,7 +59,7 @@ const TestimonialsGroup = ({ data }) => {
               id: 0,
             }}
           >
-            <span className="uppercase tracking-wide text-blue-700 hover:underline with-arrow sm:self-end mt-6 sm:mt-0">
+            <span className="mt-6 tracking-wide text-blue-700 uppercase sm:self-end sm:mt-0 hover:underline with-arrow">
               Read story
             </span>
           </CustomLink>
@@ -67,7 +67,7 @@ const TestimonialsGroup = ({ data }) => {
       </div>
       {/* Change selected testimonial (only if there is more than one) */}
       {data.testimonials.length > 1 && (
-        <div className="flex flex-row gap-4 mt-10 justify-center">
+        <div className="flex flex-row gap-4 justify-center mt-10">
           {data.testimonials.map((testimonial, index) => (
             <button
               onClick={() => setSelectedTestimonialIndex(index)}
@@ -85,11 +85,11 @@ const TestimonialsGroup = ({ data }) => {
         </div>
       )}
       {/* Logos list */}
-      <div className="flex flex-row flex-wrap items-center gap-6 sm:gap-20 justify-center mt-10 px-6 sm:px-0">
+      <div className="flex flex-row flex-wrap gap-6 justify-center items-center px-6 mt-10 sm:gap-20 sm:px-0">
         {data.logos.map((logo) => (
           <CustomImage
             media={logo?.logo}
-            className="h-8 max-w-xs w-auto object-contain"
+            className="object-contain w-auto max-w-xs h-8"
             key={logo.id}
           />
         ))}

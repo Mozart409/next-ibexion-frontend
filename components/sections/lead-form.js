@@ -18,9 +18,9 @@ const LeadForm = ({ data }) => {
 
   return (
     <div className="py-10 text-center bg-gray-100">
-      <h2 className="text-3xl mb-10 font-bold">{data.title}</h2>
-      <div className="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
-        <div className="max-w-xl mx-auto">
+      <h2 className="mb-10 text-3xl font-bold">{data.title}</h2>
+      <div className="overflow-hidden py-16 px-4 bg-white sm:px-6 lg:py-24 lg:px-8">
+        <div className="mx-auto max-w-xl">
           <Formik
             initialValues={{
               name: '',
@@ -62,13 +62,13 @@ const LeadForm = ({ data }) => {
                 <Form className="flex flex-col gap-4">
                   <label
                     htmlFor="name"
-                    className="block text-sm font-medium text-gray-700 text-left mt-2"
+                    className="block mt-2 text-sm font-medium text-left text-gray-700"
                   >
                     Name
                   </label>
 
                   <Field
-                    className="py-3 px-4 block w-full shadow-sm focus:ring-primary-500 focus:border-primary-500 border-gray-300 rounded-md"
+                    className="block py-3 px-4 w-full rounded-md border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500"
                     type="text"
                     name="name"
                     placeholder={data.namePlaceholder}
@@ -79,12 +79,12 @@ const LeadForm = ({ data }) => {
                   />
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-gray-700 text-left mt-2"
+                    className="block mt-2 text-sm font-medium text-left text-gray-700"
                   >
                     E-Mail (notwendig)
                   </label>
                   <Field
-                    className="py-3 px-4 block w-full shadow-sm focus:ring-primary-500 focus:border-primary-500 border-gray-300 rounded-md"
+                    className="block py-3 px-4 w-full rounded-md border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500"
                     type="email"
                     name="email"
                     placeholder={data.emailPlaceholder}
@@ -95,12 +95,12 @@ const LeadForm = ({ data }) => {
                   />
                   <label
                     htmlFor="tel"
-                    className="block text-sm font-medium text-gray-700 text-left mt-2"
+                    className="block mt-2 text-sm font-medium text-left text-gray-700"
                   >
                     Telefon
                   </label>
                   <Field
-                    className="py-3 px-4 block w-full shadow-sm focus:ring-primary-500 focus:border-primary-500 border-gray-300 rounded-md"
+                    className="block py-3 px-4 w-full rounded-md border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500"
                     type="tel"
                     name="tel"
                     placeholder={data.telPlaceholder}
@@ -111,12 +111,12 @@ const LeadForm = ({ data }) => {
                   />
                   <label
                     htmlFor="subject"
-                    className="block text-sm font-medium text-gray-700 text-left mt-2"
+                    className="block mt-2 text-sm font-medium text-left text-gray-700"
                   >
                     Betreff
                   </label>
                   <Field
-                    className="py-3 px-4 block w-full shadow-sm focus:ring-primary-500 focus:border-primary-500 border-gray-300 rounded-md"
+                    className="block py-3 px-4 w-full rounded-md border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500"
                     type="text"
                     name="subject"
                     placeholder={data.subjectPlaceholder}
@@ -129,14 +129,14 @@ const LeadForm = ({ data }) => {
                   {/* <div>
                     <label
                       htmlFor="checkbox"
-                      className="block text-sm font-medium text-gray-700 text-left mt-2"
+                      className="block mt-2 text-sm font-medium text-left text-gray-700"
                     >
                       Auswahl
                     </label>
                     <Field
                       name="checkbox"
                       as="select"
-                      className="mt-1 py-3 px-4 block w-full pl-3 pr-10 text-base border-gray-300 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm rounded-md"
+                      className="block py-3 px-4 pr-10 pl-3 mt-1 w-full text-base rounded-md border-gray-300 sm:text-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
                     >
                       {data.CheckboxRow.map((item) => (
                         <option key={item.id} value={item.value}>
@@ -152,12 +152,12 @@ const LeadForm = ({ data }) => {
 
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-gray-700 text-left mt-2"
+                    className="block mt-2 text-sm font-medium text-left text-gray-700"
                   >
                     Nachricht (notwendig)
                   </label>
                   <Field
-                    className="py-3 px-4 block w-full shadow-sm focus:ring-primary-500 focus:border-primary-500 border-gray-300 rounded-md"
+                    className="block py-3 px-4 w-full rounded-md border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500"
                     type="text"
                     name="message"
                     as="textarea"

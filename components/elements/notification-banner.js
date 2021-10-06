@@ -17,12 +17,12 @@ const NotificationBanner = ({ data: { text, type }, closeSelf }) => {
           }
         )}
       >
-        <div className="container flex flex-row justify-between items-center ">
-          <div className="rich-text-banner flex-1">
+        <div className="container flex flex-row justify-between items-center">
+          <div className="flex-1 rich-text-banner">
             <MarkdownRender>{text} </MarkdownRender>
           </div>
-          <button onClick={closeSelf} className="px-1 py-1 flex-shrink-0">
-            <MdClose className="h-6 w-auto" color="#fff" />
+          <button onClick={closeSelf} className="flex-shrink-0 py-1 px-1">
+            <MdClose className="w-auto h-6" color="#fff" />
           </button>
         </div>
       </div>
