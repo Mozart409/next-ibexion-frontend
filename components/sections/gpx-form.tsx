@@ -1,18 +1,15 @@
 import React from 'react'
 
 import { Formik, Field, Form, FormikHelpers, ErrorMessage } from 'formik'
+import { useForm, SubmitHandler } from 'react-hook-form'
 import * as Yup from 'yup'
 
-const SignupSchema = Yup.object().shape({
-  firstName: Yup.string()
-    .min(2, 'Too Short!')
-    .max(70, 'Too Long!')
-    .required('Required'),
-  lastName: Yup.string()
-    .min(2, 'Too Short!')
-    .max(70, 'Too Long!')
-    .required('Required'),
-  email: Yup.string().email('Invalid email').required('Required'),
+const GpxSchema = Yup.object().shape({
+  GPXDaten: Yup.string().required('Required'),
+  Fahrergewicht: Yup.number().required('Required'),
+  Bikegewicht: Yup.number().required('Required'),
+  Fahrerleistung: Yup.number().required('Required'),
+  Bikeleistung: Yup.number().required('Required'),
 })
 
 interface IFormInput {
@@ -22,7 +19,7 @@ interface IFormInput {
   placeholder?: string
 }
 
-function FormInput({ id, label, type, placeholder }: IFormInput) {
+function FormInput({ id, label, type, placeholder, ...props }: IFormInput) {
   return (
     <div>
       <label htmlFor={id} className="block text-sm font-medium text-gray-700">
@@ -35,6 +32,7 @@ function FormInput({ id, label, type, placeholder }: IFormInput) {
           id={id}
           className="block w-full rounded-md border-gray-300 shadow-sm sm:text-sm focus:ring-primary-500 focus:border-primary-500"
           placeholder={placeholder || label}
+          {...props}
         />
       </div>
       <ErrorMessage name={id}>
@@ -48,12 +46,6 @@ function FormInput({ id, label, type, placeholder }: IFormInput) {
   )
 }
 
-interface Values {
-  firstName: string
-  lastName: string
-  email: string
-}
-
 const GpxForm = () => (
   <div>
     <div>
@@ -62,14 +54,16 @@ const GpxForm = () => (
         <div className="py-8 px-4 bg-white shadow sm:px-10 sm:rounded-lg">
           <Formik
             initialValues={{
-              firstName: '',
-              lastName: '',
-              email: '',
+              GPXDaten: '',
+              Fahrergewicht: 0,
+              Bikegewicht: 0,
+              Fahrerleistung: 0,
+              Bikeleistung: 0,
             }}
-            validationSchema={SignupSchema}
+            validationSchema={GpxSchema}
             onSubmit={(
-              values: Values,
-              { setSubmitting }: FormikHelpers<Values>
+              values: SendGpxData,
+              { setSubmitting }: FormikHelpers<SendGpxData>
             ) => {
               setTimeout(() => {
                 alert(JSON.stringify(values, null, 2))
@@ -79,10 +73,10 @@ const GpxForm = () => (
           >
             <Form>
               <FormInput
-                id="firstName"
-                label="First Name"
-                placeholder="John"
-                type="text"
+                id="Fahrergewicht"
+                label="Fahrergewicht"
+                type="number"
+                placeholder="Count"
               />
 
               <FormInput
