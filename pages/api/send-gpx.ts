@@ -16,12 +16,14 @@ import { NextApiRequest, NextApiResponse } from 'next'
 }] */
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default (req: NextApiRequest, res: NextApiResponse<SendGpxData>) => {
-  res.status(200).json({
-    fahrergewicht: 75,
-    bikegewicht: 35,
-    fahrerleistung: 120,
-    bikeleistung: 100,
-    gPXDaten: 'xml',
-  })
+export default (req: NextApiRequest, res: NextApiResponse) => {
+  console.log(req.body)
+
+  if (req.method === 'POST') {
+    // Process a POST request
+    // res.status(200).json(req.body)
+  } else {
+    // Handle any other HTTP method
+    res.status(405).json({ body: 'We Only accept POST Method' })
+  }
 }

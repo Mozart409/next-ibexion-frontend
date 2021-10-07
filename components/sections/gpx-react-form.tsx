@@ -5,6 +5,7 @@ import { ErrorMessage } from '@hookform/error-message'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as Yup from 'yup'
 import toast from 'react-hot-toast'
+import axios from 'axios'
 
 const schema = Yup.object({
   fahrergewicht: Yup.number().positive().integer().min(0).max(200).required(),
@@ -12,14 +13,14 @@ const schema = Yup.object({
   fahrerleistung: Yup.number().positive().integer().min(0).max(200).required(),
   bikeleistung: Yup.number().positive().integer().min(0).max(200).required(),
 
-  /* gPXDaten: Yup.mixed()
-  .required('You need to provide a file')
-  .test('fileSize', 'The file is too large', (value) => {
-    return value && value[0].size <= 2000000
-  })
-  .test('type', 'We only support gpx files', (value) => {
-    return value && value[0].type === 'text/xml'
-  }) */
+  gPXDaten: Yup.mixed()
+    .required('You need to provide a file')
+    .test('fileSize', 'The file is too large', (value) => {
+      return value && value[0].size <= 2000000
+    }),
+  /* .test('type', 'We only support gpx files', (value) => {
+      return value && value[0].type === 'text/xml'
+    }) */
 }).required()
 
 function Select({ register, options, name, ...rest }) {
@@ -47,7 +48,11 @@ const GpxForm = () => {
     reader.readAsText(file, 'utf-8')
 
     reader.onload = () => {
-      setFileContents({ fileName: file.name, fileContent: reader.result })
+      setFileContents({
+        fileName: file.name,
+        fileContent: reader.result,
+        type: file.type,
+      })
     }
     reader.onerror = () => {
       toast.error(`Error reading file ${reader.error}`)
@@ -70,10 +75,22 @@ const GpxForm = () => {
       bikeleistung: 10,
     },
   })
-  const onSubmit = async (data) => {
+  const onSubmit = async (data, FileContents) => {
     try {
       console.log('data ', data)
+      const xml = FileContents.fileContent
+      const response = await axios({
+        method: 'post',
+        url: '/api/send-gpx',
+        responseType: 'json',
+        data: {
+          data,
+          gpxData: xml,
+        },
+      })
 
+      toast.success(JSON.stringify(response))
+      return response
       /*  console.log('filecontent', fileContent)
       toast.success('Successfully sent Form') */
     } catch (error) {
