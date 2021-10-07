@@ -2,7 +2,7 @@
   "name": "next-ibexion-frontend",
   "version": "0.4.1",
   "scripts": {
-    "dev": "next",
+    "dev": "NODE_OPTIONS='--inspect' next dev",
     "develop": "next",
     "build": "next build",
     "start": "next start",

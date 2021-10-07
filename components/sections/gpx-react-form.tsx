@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { DevTool } from '@hookform/devtools'
 import { ErrorMessage } from '@hookform/error-message'
@@ -7,18 +7,19 @@ import * as Yup from 'yup'
 import toast from 'react-hot-toast'
 
 const schema = Yup.object({
-  gPXDaten: Yup.mixed()
-    .required('You need to provide a file')
-    .test('fileSize', 'The file is too large', (value) => {
-      return value && value[0].size <= 2000000
-    })
-    .test('type', 'We only support gpx files', (value) => {
-      return value && value[0].type === 'text/xml'
-    }),
   fahrergewicht: Yup.number().positive().integer().min(0).max(200).required(),
   bikegewicht: Yup.number().positive().integer().min(0).max(200).required(),
   fahrerleistung: Yup.number().positive().integer().min(0).max(200).required(),
   bikeleistung: Yup.number().positive().integer().min(0).max(200).required(),
+
+  /* gPXDaten: Yup.mixed()
+  .required('You need to provide a file')
+  .test('fileSize', 'The file is too large', (value) => {
+    return value && value[0].size <= 2000000
+  })
+  .test('type', 'We only support gpx files', (value) => {
+    return value && value[0].type === 'text/xml'
+  }) */
 }).required()
 
 function Select({ register, options, name, ...rest }) {
@@ -38,11 +39,25 @@ function ErrorMessageCustom({ children }) {
 }
 
 const GpxForm = () => {
+  const [FileContents, setFileContents] = useState({})
+
+  function readFileContent(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files[0]
+    const reader = new FileReader()
+    reader.readAsText(file, 'utf-8')
+
+    reader.onload = () => {
+      setFileContents({ fileName: file.name, fileContent: reader.result })
+    }
+    reader.onerror = () => {
+      toast.error(`Error reading file ${reader.error}`)
+    }
+  }
   const {
     register,
     control,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isDirty, isValid },
   } = useForm<SendGpxData>({
     mode: 'onBlur',
     reValidateMode: 'onChange',
@@ -55,14 +70,24 @@ const GpxForm = () => {
       bikeleistung: 10,
     },
   })
-  const onSubmit = (data) => {
-    console.log(JSON.stringify(data, null, 2))
-    toast.success(JSON.stringify(data, null, 2))
+  const onSubmit = async (data) => {
+    try {
+      console.log('data ', data)
+
+      /*  console.log('filecontent', fileContent)
+      toast.success('Successfully sent Form') */
+    } catch (error) {
+      toast.error(error)
+    }
+
+    /*  console.log(data)
+    toast.success(JSON.stringify(data, null, 2)) */
   }
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div>
+        <pre className="bg-white">{JSON.stringify(FileContents, null, 2)}</pre>
         <label
           htmlFor="fahrergewicht"
           className="block text-sm font-medium text-gray-700"
@@ -73,6 +98,7 @@ const GpxForm = () => {
           <input
             type="number"
             id="fahrergewicht"
+            placeholder="0"
             className="block w-full rounded-md border-gray-300 shadow-sm sm:text-sm focus:ring-primary-500 focus:border-primary-500"
             {...register('fahrergewicht', {})}
           />
@@ -100,6 +126,7 @@ const GpxForm = () => {
           <input
             type="number"
             id="bikegewicht"
+            placeholder="0"
             className="block w-full rounded-md border-gray-300 shadow-sm sm:text-sm focus:ring-primary-500 focus:border-primary-500"
             {...register('bikegewicht', {})}
           />
@@ -127,6 +154,7 @@ const GpxForm = () => {
           <input
             type="number"
             id="fahrerleistung"
+            placeholder="0"
             className="block w-full rounded-md border-gray-300 shadow-sm sm:text-sm focus:ring-primary-500 focus:border-primary-500"
             {...register('fahrerleistung', {})}
           />
@@ -154,6 +182,7 @@ const GpxForm = () => {
           <input
             type="number"
             id="bikegewicht"
+            placeholder="0"
             className="block w-full rounded-md border-gray-300 shadow-sm sm:text-sm focus:ring-primary-500 focus:border-primary-500"
             {...register('bikeleistung', {})}
           />
@@ -199,12 +228,16 @@ const GpxForm = () => {
                 className="relative cursor-pointer bg-white rounded-md font-medium text-primary-600 hover:text-primary-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-primary-500"
               >
                 <span>Upload a file</span>
+
                 <input
                   id="file-upload"
                   name="file-upload"
                   type="file"
                   className="sr-only"
                   {...register('gPXDaten', {})}
+                  onChange={(e) => {
+                    readFileContent(e)
+                  }}
                 />
               </label>
               <p className="pl-1">or drag and drop</p>
@@ -224,40 +257,15 @@ const GpxForm = () => {
         </div>
       </div>
 
-      {/* <div>
-        <label
-          htmlFor="gPXDaten"
-          className="block text-sm font-medium text-gray-700"
-        >
-          gPXDaten
-        </label>
-        <div className="mt-1">
-          <input
-            type="file"
-            id="gPXDaten"
-            className="block w-full rounded-md border-gray-300 shadow-sm sm:text-sm focus:ring-primary-500 focus:border-primary-500"
-            {...register('gPXDaten', {})}
-          />
-          {errors.gPXDaten && (
-            <ErrorMessage
-              errors={errors}
-              name="gPXDaten"
-              as="span"
-              render={({ message }) => (
-                <ErrorMessageCustom>{message}</ErrorMessageCustom>
-              )}
-            />
-          )}
-        </div>
-      </div> */}
-
       <input
         type="submit"
-        className="inline-flex items-center py-2 px-4 mt-2 text-base font-medium text-white rounded-md border border-transparent shadow-sm focus:ring-2 focus:ring-offset-2 focus:outline-none bg-primary-600 hover:bg-primary-700 focus:ring-primary-500"
+        className="inline-flex w-full items-center py-2 px-4 mt-2 text-base font-medium text-white rounded-md border border-transparent shadow-sm focus:ring-2 focus:ring-offset-2 focus:outline-none bg-primary-600 hover:bg-primary-700 focus:ring-primary-500"
       />
 
       {process.env.NODE_ENV === 'development' ? (
-        <DevTool control={control} />
+        <div>
+          <DevTool control={control} />
+        </div>
       ) : null}
     </form>
   )

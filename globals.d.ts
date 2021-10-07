@@ -1,5 +1,5 @@
 type SendGpxData = {
-  gPXDaten: string
+  gPXDaten: unknown
   fahrergewicht: number
   bikegewicht: number
   fahrerleistung: number
