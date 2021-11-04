@@ -19,7 +19,7 @@ const createSitemap = (pages) => `<?xml version="1.0" encoding="UTF-8"?>
 class Sitemap extends React.Component {
   static async getInitialProps({ res }) {
     const request = await fetch(
-      'https://docker-strapi-ibexion.3iondl2h16bmc.eu-central-1.cs.amazonlightsail.com/pages'
+      'https://docker-strapi-ibexion.3iondl2h16bmc.eu-central-1.cs.amazonlightsail.com/pages?status=published'
     )
     const pages = await request.json()
 
