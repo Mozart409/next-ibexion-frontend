@@ -26,6 +26,13 @@ module.exports = {
       red: colors.rose,
       yellow: colors.amber,
     },
+
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+    },
     extend: {
       typography: (theme) => ({
         DEFAULT: {
@@ -64,6 +71,11 @@ module.exports = {
       fontFamily: {
         sans: ['Fira Sans', 'Inter var', ...defaultTheme.fontFamily.sans],
       },
+      maxWidth: {
+        '65ch': '65ch',
+        '70ch': '70ch',
+        '72ch': '72ch',
+      },
       container: {
         center: true,
         padding: {
@@ -71,12 +83,6 @@ module.exports = {
           md: '2rem',
         },
       },
-    },
-    screens: {
-      sm: '640px',
-      md: '768px',
-      lg: '1024px',
-      xl: '1280px',
     },
   },
   plugins: [

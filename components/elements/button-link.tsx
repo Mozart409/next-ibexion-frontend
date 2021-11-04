@@ -5,7 +5,7 @@ interface ButtonLinkProps {
   button?: {
     text?: string
   }
-  appearance?: 'dark' | 'white-outline' | 'white' | 'dark-outline'
+  appearance: 'dark' | 'white-outline' | 'white' | 'dark-outline'
   compact?: boolean
   type?: 'button' | 'reset' | 'submit'
   isDisabled?: boolean

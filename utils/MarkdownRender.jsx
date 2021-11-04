@@ -101,15 +101,13 @@ const MarkdownRender = ({ children, white }) => {
   }
 
   return (
-    <div>
-      <ReactMarkdown
-        className="mx-auto break-words prose prose-sm prose lg:prose-lg text-white"
-        skipHtml={true}
-        renderers={customRender}
-      >
-        {children}
-      </ReactMarkdown>
-    </div>
+    <ReactMarkdown
+      className="mx-auto break-words prose prose-sm lg:prose-lg "
+      skipHtml={true}
+      renderers={customRender}
+    >
+      {children}
+    </ReactMarkdown>
   )
 }
 
