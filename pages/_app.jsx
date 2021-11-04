@@ -9,6 +9,7 @@ import Layout from 'components/layout'
 import toast, { Toaster } from 'react-hot-toast'
 
 import 'styles/index.css'
+import 'public/fonts/fira/fira.css'
 
 const MyApp = ({ Component, pageProps }) => {
   // Prevent Next bug when it tries to render the [[...slug]] route
@@ -30,6 +31,8 @@ const MyApp = ({ Component, pageProps }) => {
       <Head>
         <link rel="shortcut icon" href={getStrapiMedia(global?.favicon?.url)} />
         <link rel="prefetch" href="/fonts/inter-var-latin.woff2" />
+        <link rel="prefetch" href="/fonts/fira/FiraSans-Bold.woff" />
+        <link rel="prefetch" href="/fonts/fira/FiraSans-Bold.woff2" />
       </Head>
       {/* Global site metadata */}
       {/* <DefaultSeo

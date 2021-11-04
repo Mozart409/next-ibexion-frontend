@@ -40,7 +40,7 @@ module.exports = {
         },
       }),
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        sans: ['Fira Sans', 'Inter var', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         primary: colors.gray,

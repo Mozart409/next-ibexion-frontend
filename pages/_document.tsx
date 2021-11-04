@@ -30,6 +30,9 @@ export default class MyDocument extends Document {
 
           <link rel="preload" href="/fonts/inter-var-latin.woff2"></link>
 
+          <link rel="preload" href="/fonts/fira/FiraSans-Bold.woff" />
+          <link rel="preload" href="/fonts/fira/FiraSans-Bold.woff2" />
+
           <link
             rel="preconnect"
             href="https://aggregator.service.usercentrics.eu"
