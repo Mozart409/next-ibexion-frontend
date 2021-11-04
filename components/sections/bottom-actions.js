@@ -3,7 +3,7 @@ import { getButtonAppearance } from 'utils/button'
 
 const BottomActions = ({ data }) => {
   return (
-    <section className="py-20 text-center bg-primary-800">
+    <section className="py-20 text-center bg-lava-orange">
       <h2 className="mb-10 text-white title">{data.title}</h2>
       {/* Buttons row */}
       <div className="container flex flex-row flex-wrap gap-4 justify-center">

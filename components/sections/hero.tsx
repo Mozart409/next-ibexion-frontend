@@ -9,15 +9,15 @@ const Hero = ({ data }) => {
       {/* Left column for content */}
       <div className="col-span-4">
         {/* Hero section label */}
-        <p className="font-semibold tracking-wide text-gray-200 uppercase">
+        <p className="font-semibold tracking-wide text-lava-black uppercase">
           {data.label}
         </p>
         {/* Big title */}
-        <h1 className="mt-2 mb-4 text-gray-50 sm:mt-0 sm:mb-2 title">
+        <h1 className="mt-2 mb-4 text-lava-black-dark sm:mt-0 sm:mb-2 title">
           {data.title}
         </h1>
         {/* Description paragraph */}
-        <p className="mb-6 text-xl text-gray-300">{data.description}</p>
+        <p className="mb-6 text-xl text-lava-black-light">{data.description}</p>
         {/* Buttons row */}
         <div className="flex flex-row flex-wrap gap-4">
           {data.buttons.map((button) => (

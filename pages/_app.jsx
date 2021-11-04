@@ -7,11 +7,15 @@ import { getStrapiMedia } from 'utils/media'
 import { getStrapiURL, getGlobalData } from 'utils/api'
 import Layout from 'components/layout'
 import toast, { Toaster } from 'react-hot-toast'
+import { QueryClient, QueryClientProvider } from 'react-query'
+import { ReactQueryDevtools } from 'react-query/devtools'
 
 import 'styles/index.css'
 import 'public/fonts/fira/fira.css'
 
 const MyApp = ({ Component, pageProps }) => {
+  const queryClient = new QueryClient()
+
   // Prevent Next bug when it tries to render the [[...slug]] route
   const router = useRouter()
   if (router.asPath === '/[[...slug]]') {
@@ -54,10 +58,14 @@ const MyApp = ({ Component, pageProps }) => {
         }}
       /> */}
       {/* Display the content */}
-      <Layout global={global}>
-        <Component {...pageProps} />
-        <Toaster />
-      </Layout>
+      <QueryClientProvider client={queryClient}>
+        <Layout global={global}>
+          <Component {...pageProps} />
+          <Toaster />
+        </Layout>
+
+        <ReactQueryDevtools initialIsOpen={false} />
+      </QueryClientProvider>
     </>
   )
 }

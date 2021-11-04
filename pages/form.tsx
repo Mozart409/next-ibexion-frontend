@@ -39,7 +39,7 @@ const Form: NextPage<FormProps> = () => {
 
               <input
                 type="submit"
-                className="inline-flex w-full items-center py-2 px-4 mt-2 text-base font-medium text-white rounded-md border border-transparent shadow-sm focus:ring-2 focus:ring-offset-2 focus:outline-none bg-primary-600 hover:bg-primary-700 focus:ring-primary-500"
+                className="inline-flex w-full items-center py-2 px-4 mt-2 text-base font-medium text-white rounded-md border border-transparent shadow-sm focus:ring-2 focus:ring-offset-2 focus:outline-none bg-lava-orange hover:bg-lava-orange focus:ring-lava-orange"
               />
             </div>
           </div>

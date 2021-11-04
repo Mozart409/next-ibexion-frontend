@@ -9,6 +9,10 @@ import RichText from './sections/rich-text'
 import Pricing from './sections/pricing'
 import LeadForm from './sections/lead-form'
 import LevelModel from './sections/level-model'
+import ImageSection from './sections/image-section'
+import DynamicRichText from './sections/dynamic-rich-text'
+import DangerousHTML from './sections/dangerous-html'
+import CoverImage from './sections/cover-image'
 
 // Map Strapi sections to section components
 const sectionComponents = {
@@ -22,6 +26,10 @@ const sectionComponents = {
   'sections.pricing': Pricing,
   'sections.lead-form': LeadForm,
   'sections.level-model': LevelModel,
+  'sections.image': ImageSection,
+  'sections.dynamic-content': DynamicRichText,
+  'sections.dangerous-html': DangerousHTML,
+  'sections.coverimage': CoverImage,
 }
 
 // Display a section individually
@@ -34,6 +42,9 @@ const Section = ({ sectionData }) => {
   }
 
   // Display the section
+  /* {
+    console.log(sectionData)
+  } */
   return <SectionComponent data={sectionData} />
 }
 
@@ -65,7 +76,7 @@ const Sections = ({ sections, preview }) => {
       {/* Show a banner if preview mode is on */}
       {preview && <PreviewModeBanner />}
       {/* Show the actual sections */}
-      {sections.map((section) => (
+      {sections?.map((section) => (
         <Section
           sectionData={section}
           key={`${section.__component}${section.id}`}

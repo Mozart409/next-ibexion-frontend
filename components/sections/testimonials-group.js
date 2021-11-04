@@ -59,7 +59,7 @@ const TestimonialsGroup = ({ data }) => {
               id: 0,
             }}
           >
-            <span className="mt-6 tracking-wide text-blue-700 uppercase sm:self-end sm:mt-0 hover:underline with-arrow">
+            <span className="mt-6 tracking-wide text-canary-blue uppercase sm:self-end sm:mt-0 hover:underline with-arrow">
               Read story
             </span>
           </CustomLink>
@@ -76,7 +76,7 @@ const TestimonialsGroup = ({ data }) => {
                 'rounded-full h-3 w-3',
                 {
                   'bg-gray-500': index !== selectedTestimonialIndex,
-                  'bg-primary-600': index === selectedTestimonialIndex,
+                  'bg-lava-orange': index === selectedTestimonialIndex,
                 }
               )}
               key={testimonial.id}
