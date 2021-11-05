@@ -18,7 +18,7 @@ export interface LoadingItem {
 
 function IbexionLoadingBar({ data }: Props): ReactElement {
   return (
-    <div className="bg-lava-black-light">
+    <div className="bg-lava-black-dark">
       {data.Item.map((item) => (
         <IbexionLoadingItem
           key={item.id}
