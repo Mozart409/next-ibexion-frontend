@@ -8,7 +8,7 @@ interface Props {
 
 function IbexionLoadingItem({ percent, label }: Props): ReactElement {
   return (
-    <div className="py-6">
+    <div className="py-6 mx-4 md:mx-0">
       <div className="max-w-72ch w-full mx-auto">
         <div className="grid grid-cols-2 gap-x-4 justify-between gap-y-2">
           <div className="col-span-1 justify-self-start">

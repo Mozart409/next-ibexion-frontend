@@ -17,7 +17,7 @@ const Footer = ({ footer }) => {
             />
           )}
         </div>
-        <nav className="flex flex-row flex-wrap items-start mb-10 lg:gap-20 lg:justify-end">
+        <nav className="flex flex-row flex-wrap items-start mb-10 lg:gap-20 lg:justify-end divide-y-4 divide-gecko-gray divide-solid">
           {footer.columns.map((footerColumn) => (
             <div
               key={footerColumn.id}
