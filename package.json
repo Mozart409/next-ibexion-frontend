@@ -18,6 +18,7 @@
     "@heroicons/react": "^1.0.5",
     "@hookform/error-message": "^2.0.0",
     "@hookform/resolvers": "^2.8.2",
+    "@ramonak/react-progress-bar": "^4.0.0",
     "@relative-ci/agent": "^2.1.0",
     "@tailwindcss/typography": "^0.4.1",
     "autoprefixer": "^10.3.7",

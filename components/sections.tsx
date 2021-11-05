@@ -14,6 +14,7 @@ import DynamicRichText from './sections/dynamic-rich-text'
 import DangerousHTML from './sections/dangerous-html'
 import CoverImage from './sections/cover-image'
 import CallToAction from './sections/call-to-action'
+import IbexionLoadingBar from './sections/ibexion-loadingbar'
 
 // Map Strapi sections to section components
 const sectionComponents = {
@@ -32,6 +33,7 @@ const sectionComponents = {
   'sections.dangerous-html': DangerousHTML,
   'sections.coverimage': CoverImage,
   'sections.call-to-action': CallToAction,
+  'sections.ibexion-loading-bar': IbexionLoadingBar,
 }
 
 // Display a section individually
@@ -44,9 +46,9 @@ const Section = ({ sectionData }) => {
   }
 
   // Display the section
-  /* {
-    console.log(sectionData)
-  } */
+
+  // console.log(sectionData)
+
   return <SectionComponent data={sectionData} />
 }
 

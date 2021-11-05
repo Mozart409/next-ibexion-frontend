@@ -387,6 +387,11 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@ramonak/react-progress-bar@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@ramonak/react-progress-bar/-/react-progress-bar-4.0.0.tgz#9bebaf1e8de3ccced7169abfd336eb0346a9880f"
+  integrity sha512-nhCmnH7PBA4KJ/h6VosRbvBf0zIQ6UJWJwa2dPWRLZxA+7BdRZV8Qde4KZoqtyDFKN2HNcT/YBOAMBjEAcoNsw==
+
 "@relative-ci/agent@^2.1.0":
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/@relative-ci/agent/-/agent-2.1.0.tgz#29ea21d155f00852fd4dddee6085cb0d91e5aede"
