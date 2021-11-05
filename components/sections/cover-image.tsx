@@ -27,10 +27,10 @@ export default function CoverImage({ data }: Props): ReactElement {
             src={fullUrl}
             alt={data.picture?.alternativeText || ''}
             title={data.picture?.caption || ''}
-            layout="intrinsic"
+            layout="responsive"
             className=""
             width={1920}
-            height={720}
+            height={1080}
           />
         </div>
       </CustomLink>
@@ -45,10 +45,10 @@ export default function CoverImage({ data }: Props): ReactElement {
         src={fullUrl}
         alt={data.picture?.alternativeText || ''}
         title={data.picture?.caption || ''}
-        layout="intrinsic"
+        layout="responsive"
         className=""
         width={1920}
-        height={720}
+        height={1080}
       />
     </div>
   )
