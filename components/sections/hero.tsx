@@ -5,19 +5,19 @@ import { getButtonAppearance } from 'utils/button'
 
 const Hero = ({ data }) => {
   return (
-    <main className="container grid grid-cols-4 grid-flow-row-dense gap-4 justify-between items-center py-12 md:grid-cols-8 md:grid-flow-col">
+    <main className="container px-4 rounded-b-md grid grid-cols-4 grid-flow-row-dense gap-4 justify-between items-center py-12 md:grid-cols-8 md:grid-flow-col bg-gecko-gray">
       {/* Left column for content */}
       <div className="col-span-4">
         {/* Hero section label */}
-        <p className="font-semibold tracking-wide text-lava-black uppercase">
+        <p className="font-semibold tracking-wide text-gray-200 uppercase">
           {data.label}
         </p>
         {/* Big title */}
-        <h1 className="mt-2 mb-4 text-lava-black-dark sm:mt-0 sm:mb-2 title">
+        <h1 className="mt-2 mb-4 text-white sm:mt-0 sm:mb-2 title">
           {data.title}
         </h1>
         {/* Description paragraph */}
-        <p className="mb-6 text-xl text-lava-black-light">{data.description}</p>
+        <p className="mb-6 text-xl text-gray-300">{data.description}</p>
         {/* Buttons row */}
         <div className="flex flex-row flex-wrap gap-4">
           {data.buttons.map((button) => (
