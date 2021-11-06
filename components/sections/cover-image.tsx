@@ -48,7 +48,7 @@ function ImageComp({
 }
 
 export default function CoverImage({ data }: Props): ReactElement {
-  const fullUrl = getStrapiMedia(data.picture.url)
+  const fullUrl = getStrapiMedia(data?.picture?.url)
   if (data.link)
     return (
       <CustomLink link={data.link}>
