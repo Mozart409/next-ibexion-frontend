@@ -5,7 +5,7 @@ import { getButtonAppearance } from 'utils/button'
 
 const Hero = ({ data }) => {
   return (
-    <main className="container grid grid-cols-4 grid-flow-row-dense gap-4 justify-between items-center py-12 md:grid-cols-8 md:grid-flow-col">
+    <main className="container px-4 rounded-b-md grid grid-cols-4 grid-flow-row-dense gap-4 justify-between items-center py-12 md:grid-cols-8 md:grid-flow-col bg-gecko-gray">
       {/* Left column for content */}
       <div className="col-span-4">
         {/* Hero section label */}
@@ -13,7 +13,7 @@ const Hero = ({ data }) => {
           {data.label}
         </p>
         {/* Big title */}
-        <h1 className="mt-2 mb-4 text-gray-50 sm:mt-0 sm:mb-2 title">
+        <h1 className="mt-2 mb-4 text-white sm:mt-0 sm:mb-2 title">
           {data.title}
         </h1>
         {/* Description paragraph */}

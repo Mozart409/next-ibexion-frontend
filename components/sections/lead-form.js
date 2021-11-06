@@ -68,7 +68,7 @@ const LeadForm = ({ data }) => {
                   </label>
 
                   <Field
-                    className="block py-3 px-4 w-full rounded-md border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500"
+                    className="block py-3 px-4 w-full rounded-md border-gray-300 shadow-sm focus:ring-lava-orange focus:border-lava-orange"
                     type="text"
                     name="name"
                     placeholder={data.namePlaceholder}
@@ -84,7 +84,7 @@ const LeadForm = ({ data }) => {
                     E-Mail (notwendig)
                   </label>
                   <Field
-                    className="block py-3 px-4 w-full rounded-md border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500"
+                    className="block py-3 px-4 w-full rounded-md border-gray-300 shadow-sm focus:ring-lava-orange focus:border-lava-orange"
                     type="email"
                     name="email"
                     placeholder={data.emailPlaceholder}
@@ -100,7 +100,7 @@ const LeadForm = ({ data }) => {
                     Telefon
                   </label>
                   <Field
-                    className="block py-3 px-4 w-full rounded-md border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500"
+                    className="block py-3 px-4 w-full rounded-md border-gray-300 shadow-sm focus:ring-lava-orange focus:border-lava-orange"
                     type="tel"
                     name="tel"
                     placeholder={data.telPlaceholder}
@@ -116,7 +116,7 @@ const LeadForm = ({ data }) => {
                     Betreff
                   </label>
                   <Field
-                    className="block py-3 px-4 w-full rounded-md border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500"
+                    className="block py-3 px-4 w-full rounded-md border-gray-300 shadow-sm focus:ring-lava-orange focus:border-lava-orange"
                     type="text"
                     name="subject"
                     placeholder={data.subjectPlaceholder}
@@ -136,7 +136,7 @@ const LeadForm = ({ data }) => {
                     <Field
                       name="checkbox"
                       as="select"
-                      className="block py-3 px-4 pr-10 pl-3 mt-1 w-full text-base rounded-md border-gray-300 sm:text-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
+                      className="block py-3 px-4 pr-10 pl-3 mt-1 w-full text-base rounded-md border-gray-300 sm:text-sm focus:outline-none focus:ring-lava-orange focus:border-lava-orange"
                     >
                       {data.CheckboxRow.map((item) => (
                         <option key={item.id} value={item.value}>
@@ -157,7 +157,7 @@ const LeadForm = ({ data }) => {
                     Nachricht (notwendig)
                   </label>
                   <Field
-                    className="block py-3 px-4 w-full rounded-md border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500"
+                    className="block py-3 px-4 w-full rounded-md border-gray-300 shadow-sm focus:ring-lava-orange focus:border-lava-orange"
                     type="text"
                     name="message"
                     as="textarea"

@@ -116,7 +116,7 @@ const GpxForm = () => {
             type="number"
             id="fahrergewicht"
             placeholder="0"
-            className="block w-full rounded-md border-gray-300 shadow-sm sm:text-sm focus:ring-primary-500 focus:border-primary-500"
+            className="block w-full rounded-md border-gray-300 shadow-sm sm:text-sm focus:ring-lava-orange focus:border-lava-orange"
             {...register('fahrergewicht', {})}
           />
           {errors.fahrergewicht && (
@@ -144,7 +144,7 @@ const GpxForm = () => {
             type="number"
             id="bikegewicht"
             placeholder="0"
-            className="block w-full rounded-md border-gray-300 shadow-sm sm:text-sm focus:ring-primary-500 focus:border-primary-500"
+            className="block w-full rounded-md border-gray-300 shadow-sm sm:text-sm focus:ring-lava-orange focus:border-lava-orange"
             {...register('bikegewicht', {})}
           />
           {errors.bikegewicht && (
@@ -172,7 +172,7 @@ const GpxForm = () => {
             type="number"
             id="fahrerleistung"
             placeholder="0"
-            className="block w-full rounded-md border-gray-300 shadow-sm sm:text-sm focus:ring-primary-500 focus:border-primary-500"
+            className="block w-full rounded-md border-gray-300 shadow-sm sm:text-sm focus:ring-lava-orange focus:border-lava-orange"
             {...register('fahrerleistung', {})}
           />
           {errors.fahrerleistung && (
@@ -200,7 +200,7 @@ const GpxForm = () => {
             type="number"
             id="bikegewicht"
             placeholder="0"
-            className="block w-full rounded-md border-gray-300 shadow-sm sm:text-sm focus:ring-primary-500 focus:border-primary-500"
+            className="block w-full rounded-md border-gray-300 shadow-sm sm:text-sm focus:ring-lava-orange focus:border-lava-orange"
             {...register('bikeleistung', {})}
           />
           {errors.bikeleistung && (
@@ -242,7 +242,7 @@ const GpxForm = () => {
             <div className="flex text-sm text-gray-600">
               <label
                 htmlFor="file-upload"
-                className="relative cursor-pointer bg-white rounded-md font-medium text-primary-600 hover:text-primary-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-primary-500"
+                className="relative cursor-pointer bg-white rounded-md font-medium text-lava-orange hover:text-lava-orange focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-lava-orange"
               >
                 <span>Upload a file</span>
 
@@ -276,7 +276,7 @@ const GpxForm = () => {
 
       <input
         type="submit"
-        className="inline-flex w-full items-center py-2 px-4 mt-2 text-base font-medium text-white rounded-md border border-transparent shadow-sm focus:ring-2 focus:ring-offset-2 focus:outline-none bg-primary-600 hover:bg-primary-700 focus:ring-primary-500"
+        className="inline-flex w-full items-center py-2 px-4 mt-2 text-base font-medium text-white rounded-md border border-transparent shadow-sm focus:ring-2 focus:ring-offset-2 focus:outline-none bg-lava-orange hover:bg-lava-orange focus:ring-lava-orange"
       />
 
       {process.env.NODE_ENV === 'development' ? (

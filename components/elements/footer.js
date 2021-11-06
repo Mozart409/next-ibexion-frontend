@@ -6,7 +6,7 @@ import CustomLink from './custom-link'
 const Footer = ({ footer }) => {
   return (
     <footer className="pt-10 bg-gray-800">
-      <div className="container flex flex-col lg:flex-row lg:justify-between">
+      <div className="container flex flex-col md:flex-row md:justify-evenly lg:justify-between">
         <div>
           {footer.logo && (
             <CustomImage
@@ -17,25 +17,29 @@ const Footer = ({ footer }) => {
             />
           )}
         </div>
-        <nav className="flex flex-row flex-wrap items-start mb-10 lg:gap-20 lg:justify-end">
+        <nav className="flex flex-row flex-wrap items-start mb-10 md:gap-20 md:justify-end">
           {footer.columns.map((footerColumn) => (
             <div
               key={footerColumn.id}
-              className="mt-10 w-6/12 lg:mt-0 lg:w-auto"
+              className="mt-10 w-6/12 md:mt-0 md:w-auto "
             >
               <p className="font-semibold tracking-wide text-gray-300 uppercase">
                 {footerColumn.title}
               </p>
-              <ul className="mt-2">
-                {footerColumn.links.map((link) => (
-                  <li
-                    key={link.id}
-                    className="py-1 px-1 -mx-1 text-gray-400 hover:text-gray-600"
-                  >
-                    <CustomLink link={link}>{link?.text}</CustomLink>
-                  </li>
-                ))}
-              </ul>
+              <div className="flex flex-col">
+                <ul className="mt-2 divide-y-2 divide-gecko-gray divide-solid md:divide-y-0">
+                  {footerColumn.links.map((link) => (
+                    <li
+                      key={link.id}
+                      className="py-1 px-1 -mx-1 text-gray-400 hover:text-gray-600 "
+                    >
+                      <CustomLink className="" link={link}>
+                        {link?.text}
+                      </CustomLink>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           ))}
         </nav>

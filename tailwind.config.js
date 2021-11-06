@@ -4,6 +4,35 @@ module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: false,
   theme: {
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      gray: colors.gray,
+      white: colors.white,
+      green: colors.green,
+      primary: '#ffee00',
+      'lava-black': {
+        light: '#505050',
+        DEFAULT: '#373737',
+        dark: '#040204',
+      },
+      'canary-blue': '#1A75BB',
+      'lava-orange': '#FF8200',
+      'rubber-gray': '#161A1E',
+      'colfo-gray': '#272F38',
+      'gecko-gray': '#50545E',
+      'meta-blue': '#449FDB',
+
+      red: colors.rose,
+      yellow: colors.amber,
+    },
+
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+    },
     extend: {
       typography: (theme) => ({
         DEFAULT: {
@@ -40,28 +69,20 @@ module.exports = {
         },
       }),
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        sans: ['Fira Sans', 'Inter var', ...defaultTheme.fontFamily.sans],
       },
-      colors: {
-        primary: colors.gray,
-        cyan: colors.cyan,
-        yellow: colors.amber,
-        orange: colors.orange,
-        trueGray: colors.trueGray,
+      maxWidth: {
+        '65ch': '65ch',
+        '70ch': '70ch',
+        '72ch': '72ch',
       },
       container: {
         center: true,
-        padding: {
+        /* padding: {
           DEFAULT: '1rem',
           md: '2rem',
-        },
+        }, */
       },
-    },
-    screens: {
-      sm: '640px',
-      md: '768px',
-      lg: '1024px',
-      xl: '1280px',
     },
   },
   plugins: [

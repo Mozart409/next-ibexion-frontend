@@ -16,7 +16,7 @@ const Navbar = ({ navbar }) => {
     <>
       {/* The actual navbar */}
       <nav className="py-6 bg-white border-b-2 border-gray-200 sm:py-2">
-        <div className="container flex flex-row justify-between items-center">
+        <div className="container flex flex-row justify-between md:justify-around items-center">
           {/* Content aligned to the left */}
           <div className="flex flex-row items-center">
             <Link href="/[[...slug]]" as="/">
@@ -51,7 +51,7 @@ const Navbar = ({ navbar }) => {
           </button>
           {/* CTA button on desktop */}
           {navbar.button && (
-            <div className="hidden md:block">
+            <div className="hidden md:block ">
               <ButtonLink
                 button={navbar.button}
                 appearance={getButtonAppearance(navbar.button.type, 'light')}

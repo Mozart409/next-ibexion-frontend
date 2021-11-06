@@ -47,3 +47,12 @@ export async function getGlobalData() {
   const global = await fetchAPI('/global')
   return global
 }
+export async function getDynamicRT(name: string) {
+  const richTextData = await fetchAPI(`/dynamic-rich-texts?name=${name}`)
+
+  if (richTextData == null || richTextData.length === 0) {
+    return null
+  }
+
+  return richTextData[0]
+}

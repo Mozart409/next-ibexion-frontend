@@ -1,4 +1,3 @@
-import ErrorPage from 'next/error'
 import { getStrapiURL, getPageData } from 'utils/api'
 import Sections from 'components/sections'
 import Seo from 'components/elements/seo'
