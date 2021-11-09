@@ -19,9 +19,9 @@ const MobileNavMenu = ({ navbar, closeSelf }) => {
           {/* Company logo */}
           <CustomImage
             media={navbar?.logo}
-            className="object-contain w-auto h-8 rounded-full"
-            width={16}
-            height={16}
+            className="object-contain w-auto h-12 rounded-full pl-2"
+            width={64}
+            height={64}
           />
           {/* Close button */}
           <button onClick={closeSelf} className="py-1 px-1">

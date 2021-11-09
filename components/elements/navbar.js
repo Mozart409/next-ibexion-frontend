@@ -16,14 +16,14 @@ const Navbar = ({ navbar }) => {
     <>
       {/* The actual navbar */}
       <nav className="py-6 bg-white border-b-2 border-gray-200 sm:py-2">
-        <div className="container flex flex-row justify-between md:justify-around items-center">
+        <div className="container flex flex-row pl-2 justify-between items-center">
           {/* Content aligned to the left */}
           <div className="flex flex-row items-center">
             <Link href="/[[...slug]]" as="/">
               <a>
                 <CustomImage
                   media={navbar?.logo}
-                  className="object-contain w-auto h-8 rounded-full"
+                  className="object-contain w-auto h-8"
                   width={64}
                   height={64}
                 />
@@ -47,7 +47,7 @@ const Navbar = ({ navbar }) => {
             onClick={() => setMobileMenuIsShown(true)}
             className="block p-1 md:hidden"
           >
-            <MdMenu className="w-auto h-8" />
+            <MdMenu className="w-auto h-8 pr-2" />
           </button>
           {/* CTA button on desktop */}
           {navbar.button && (
