@@ -40,7 +40,6 @@
     "react-icons": "^4.3.1",
     "react-markdown": "^5.0.3",
     "react-query": "^3.31.0",
-    "sharp": "^0.29.2",
     "slugify": "^1.6.1",
     "webpack": "^5.57.1",
     "webpack-stats-plugin": "^1.0.3",
