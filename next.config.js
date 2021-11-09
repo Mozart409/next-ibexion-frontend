@@ -1,8 +1,12 @@
 const withPlugins = require('next-compose-plugins')
 
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
+
 const { StatsWriterPlugin } = require('webpack-stats-plugin')
 const { RelativeCiAgentWebpackPlugin } = require('@relative-ci/agent')
-const nextConfig = {
+let nextConfig = {
   env: {
     NEXT_PUBLIC_STRAPI_API_URL: process.env.NEXT_PUBLIC_STRAPI_API_URL,
   },
@@ -52,9 +56,11 @@ const nextConfig = {
     return config
   },
 }
+
 module.exports = withPlugins(
   [
     // your other plugins here
+    withBundleAnalyzer,
   ],
   nextConfig
 )

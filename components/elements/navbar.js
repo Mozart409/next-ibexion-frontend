@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import PropTypes from 'prop-types'
-import { MdMenu } from 'react-icons/md'
+
 import MobileNavMenu from './mobile-nav-menu'
 import ButtonLink from './button-link'
 import CustomImage from './image'
@@ -47,7 +47,20 @@ const Navbar = ({ navbar }) => {
             onClick={() => setMobileMenuIsShown(true)}
             className="block p-1 md:hidden"
           >
-            <MdMenu className="w-auto h-8 pr-2" />
+            <div className="w-auto h-8 pr-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </div>
           </button>
           {/* CTA button on desktop */}
           {navbar.button && (
