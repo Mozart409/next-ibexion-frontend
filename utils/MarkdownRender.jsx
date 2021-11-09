@@ -102,7 +102,7 @@ const MarkdownRender = ({ children, white }) => {
 
   return (
     <ReactMarkdown
-      className="mx-auto break-words prose prose-sm lg:prose-lg "
+      className="mx-auto break-words prose prose-sm lg:prose-lg text-white"
       skipHtml={true}
       renderers={customRender}
     >
