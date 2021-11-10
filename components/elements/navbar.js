@@ -16,21 +16,11 @@ const Navbar = ({ navbar }) => {
     <>
       {/* The actual navbar */}
       <nav className="py-6 bg-white border-b-2 border-gray-200 sm:py-2">
-        <div className="container flex flex-row pl-2 justify-between items-center">
+        <div className="container grid grid-flow-row grid-cols-3 pl-2 justify-between items-center">
           {/* Content aligned to the left */}
-          <div className="flex flex-row items-center">
-            <Link href="/[[...slug]]" as="/">
-              <a>
-                <CustomImage
-                  media={navbar?.logo}
-                  className="object-contain w-auto h-8"
-                  width={64}
-                  height={64}
-                />
-              </a>
-            </Link>
+          <div className="flex flex-row items-center justify-self-start">
             {/* List of links on desktop */}
-            <ul className="hidden flex-row gap-4 items-baseline ml-10 list-none md:flex">
+            <ul className="hidden flex-row gap-4 items-baseline list-none md:flex">
               {navbar.links.map((navLink) => (
                 <li key={navLink.id}>
                   <CustomLink link={navLink}>
@@ -42,10 +32,23 @@ const Navbar = ({ navbar }) => {
               ))}
             </ul>
           </div>
+          <div className="justify-self-center">
+            <Link href="/[[...slug]]" as="/">
+              <a>
+                <CustomImage
+                  media={navbar?.logo}
+                  className="object-contain w-auto h-auto"
+                  width={128}
+                  height={64}
+                />
+              </a>
+            </Link>
+          </div>
+
           {/* Hamburger menu on mobile */}
           <button
             onClick={() => setMobileMenuIsShown(true)}
-            className="block p-1 md:hidden"
+            className="block p-1 md:hidden justify-self-end"
           >
             <div className="w-auto h-8 pr-2">
               <svg
@@ -64,7 +67,7 @@ const Navbar = ({ navbar }) => {
           </button>
           {/* CTA button on desktop */}
           {navbar.button && (
-            <div className="hidden md:block ">
+            <div className="hidden md:block justify-self-end">
               <ButtonLink
                 button={navbar.button}
                 appearance={getButtonAppearance(navbar.button.type, 'light')}

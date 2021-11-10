@@ -1,7 +1,16 @@
 const colors = require('tailwindcss/colors')
 const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  purge: {
+    content: [
+      './pages/**/*.{js,ts,jsx,tsx}',
+      './components/**/*.{js,ts,jsx,tsx}',
+    ],
+
+    options: {
+      safelist: ['prose'],
+    },
+  },
   darkMode: false,
   theme: {
     colors: {
@@ -69,7 +78,7 @@ module.exports = {
         },
       }),
       fontFamily: {
-        sans: ['Fira Sans', 'Inter var', ...defaultTheme.fontFamily.sans],
+        sans: ['Fira Sans', ...defaultTheme.fontFamily.sans],
       },
       maxWidth: {
         '65ch': '65ch',
