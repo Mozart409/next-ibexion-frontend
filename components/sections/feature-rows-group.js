@@ -25,7 +25,7 @@ const FeatureRowsGroup = ({ data }) => {
             <p className="my-6">{feature.description}</p>
             {feature.link ? (
               <CustomLink link={feature.link}>
-                <div className="text-canary-blue hover:underline with-arrow">
+                <div className="hover:underline text-canary-blue with-arrow">
                   {feature.link?.text}
                 </div>
               </CustomLink>

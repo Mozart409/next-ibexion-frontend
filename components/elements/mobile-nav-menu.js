@@ -11,23 +11,26 @@ const MobileNavMenu = ({ navbar, closeSelf }) => {
   useLockBodyScroll()
 
   return (
-    <div className="overflow-y-scroll fixed top-0 left-0 z-10 pb-6 w-screen h-screen bg-white">
-      <div className="container flex flex-col justify-between">
+    <div className="overflow-y-scroll fixed top-0 left-0 z-10 pb-6 w-screen h-screen bg-white py-6  border-b-2 border-gray-200 sm:py-2">
+      <div className="container grid grid-cols-3 grid-flow-row justify-between items-center">
         {/* Top section */}
-        <div className="flex flex-row justify-between items-center py-2">
-          {/* Company logo */}
+        <div></div>
+        {/* Company logo */}
+        <div className="justify-self-center">
           <CustomImage
             media={navbar?.logo}
-            className="object-contain w-auto h-12 rounded-full pl-2"
-            width={64}
+            className="object-contain w-auto h-auto"
+            width={128}
             height={64}
-          />
-          {/* Close button */}
+          />{' '}
+        </div>
+        {/* Close button */}
+        <div className="justify-self-end">
           <button onClick={closeSelf} className="py-1 px-1">
             <div className="w-auto h-8">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className="w-5 h-5"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >
@@ -40,6 +43,7 @@ const MobileNavMenu = ({ navbar, closeSelf }) => {
             </div>
           </button>
         </div>
+
         {/* Bottom section */}
         <div className="flex flex-col justify-end mx-auto w-9/12">
           <ul className="flex flex-col gap-6 items-baseline mb-10 text-xl list-none">
@@ -52,7 +56,7 @@ const MobileNavMenu = ({ navbar, closeSelf }) => {
                     <div className="w-auto h-8">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6"
+                        className="w-6 h-6"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"

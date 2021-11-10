@@ -59,7 +59,7 @@ const TestimonialsGroup = ({ data }) => {
               id: 0,
             }}
           >
-            <span className="mt-6 tracking-wide text-canary-blue uppercase sm:self-end sm:mt-0 hover:underline with-arrow">
+            <span className="mt-6 tracking-wide uppercase sm:self-end sm:mt-0 hover:underline text-canary-blue with-arrow">
               Read story
             </span>
           </CustomLink>

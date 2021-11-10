@@ -223,10 +223,10 @@ const GpxForm = () => {
         >
           Gpx File
         </label>
-        <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+        <div className="flex justify-center px-6 pt-5 pb-6 mt-1 rounded-md border-2 border-gray-300 border-dashed">
           <div className="space-y-1 text-center">
             <svg
-              className="mx-auto h-12 w-12 text-gray-400"
+              className="mx-auto w-12 h-12 text-gray-400"
               stroke="currentColor"
               fill="none"
               viewBox="0 0 48 48"
@@ -242,7 +242,7 @@ const GpxForm = () => {
             <div className="flex text-sm text-gray-600">
               <label
                 htmlFor="file-upload"
-                className="relative cursor-pointer bg-white rounded-md font-medium text-lava-orange hover:text-lava-orange focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-lava-orange"
+                className="relative font-medium bg-white rounded-md cursor-pointer focus-within:ring-2 focus-within:ring-offset-2 focus-within:outline-none text-lava-orange focus-within:ring-lava-orange hover:text-lava-orange"
               >
                 <span>Upload a file</span>
 
@@ -276,7 +276,7 @@ const GpxForm = () => {
 
       <input
         type="submit"
-        className="inline-flex w-full items-center py-2 px-4 mt-2 text-base font-medium text-white rounded-md border border-transparent shadow-sm focus:ring-2 focus:ring-offset-2 focus:outline-none bg-lava-orange hover:bg-lava-orange focus:ring-lava-orange"
+        className="inline-flex items-center py-2 px-4 mt-2 w-full text-base font-medium text-white rounded-md border border-transparent shadow-sm focus:ring-2 focus:ring-offset-2 focus:outline-none bg-lava-orange hover:bg-lava-orange focus:ring-lava-orange"
       />
 
       {process.env.NODE_ENV === 'development' ? (

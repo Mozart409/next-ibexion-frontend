@@ -8,7 +8,7 @@ interface RichTextProps {
 
 const RichText = ({ data }: RichTextProps) => {
   return (
-    <div className="container py-12 mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="container py-12 px-4 mx-auto sm:px-6 lg:px-8">
       <MarkdownRender>{data.content}</MarkdownRender>
     </div>
   )

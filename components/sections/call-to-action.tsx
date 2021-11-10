@@ -14,8 +14,8 @@ interface Item {
 
 export default function CallToAction({ data }: CallToAction): ReactElement {
   return (
-    <div className="container py-12 mx-auto px-4 sm:px-6 md:px-9  md:max-w-prose">
-      <h2 className="text-3xl font-bold leading-7 text-white mb-2">
+    <div className="container py-12 px-4 mx-auto sm:px-6 md:px-9 md:max-w-prose">
+      <h2 className="mb-2 text-3xl font-bold leading-7 text-white">
         {data.title}
       </h2>
       <CustomLink link={data.Link}>

@@ -33,7 +33,7 @@ const DropZone: FC<IDropZoneProps> = (props) => {
   return (
     <>
       <label
-        className="block text-gray-700 text-sm font-bold mb-2 capitalize"
+        className="block mb-2 text-sm font-bold text-gray-700 capitalize"
         htmlFor={name}
       >
         {label}
@@ -41,7 +41,7 @@ const DropZone: FC<IDropZoneProps> = (props) => {
       <div {...getRootProps()}>
         <input
           {...props}
-          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          className="py-2 px-3 w-full leading-tight text-gray-700 rounded border shadow appearance-none focus:outline-none focus:shadow-outline"
           id={name}
           {...getInputProps()}
         />
@@ -51,10 +51,10 @@ const DropZone: FC<IDropZoneProps> = (props) => {
             (isDragActive ? 'bg-gray-400' : 'bg-gray-200')
           }
         >
-          <p className="text-center my-2">Drop the files here ...</p>
+          <p className="my-2 text-center">Drop the files here ...</p>
           {/* Optionally you may display a preview of the file(s) */}
           {!!files?.length && (
-            <div className="grid gap-1 grid-cols-4 mt-2">
+            <div className="grid grid-cols-4 gap-1 mt-2">
               {files.map((file) => {
                 return (
                   <div key={file.name}>

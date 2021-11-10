@@ -16,9 +16,9 @@ const Navbar = ({ navbar }) => {
     <>
       {/* The actual navbar */}
       <nav className="py-6 bg-white border-b-2 border-gray-200 sm:py-2">
-        <div className="container grid grid-flow-row grid-cols-3 pl-2 justify-between items-center">
+        <div className="container grid grid-cols-3 grid-flow-row justify-between items-center">
           {/* Content aligned to the left */}
-          <div className="flex flex-row items-center justify-self-start">
+          <div className="flex flex-row justify-self-start items-center">
             {/* List of links on desktop */}
             <ul className="hidden flex-row gap-4 items-baseline list-none md:flex">
               {navbar.links.map((navLink) => (
@@ -48,12 +48,12 @@ const Navbar = ({ navbar }) => {
           {/* Hamburger menu on mobile */}
           <button
             onClick={() => setMobileMenuIsShown(true)}
-            className="block p-1 md:hidden justify-self-end"
+            className="block justify-self-end p-1 md:hidden"
           >
-            <div className="w-auto h-8 pr-2">
+            <div className="pr-2 w-auto h-8">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className="w-5 h-5"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >
@@ -67,7 +67,7 @@ const Navbar = ({ navbar }) => {
           </button>
           {/* CTA button on desktop */}
           {navbar.button && (
-            <div className="hidden md:block justify-self-end">
+            <div className="hidden justify-self-end md:block">
               <ButtonLink
                 button={navbar.button}
                 appearance={getButtonAppearance(navbar.button.type, 'light')}

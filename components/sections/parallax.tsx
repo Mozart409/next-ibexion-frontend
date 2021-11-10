@@ -11,7 +11,7 @@ function Parallax({ data }: Props): ReactElement {
   const coverImageFullUrl = getStrapiMedia(data?.CoverImage?.url)
   const logoImageFullUrl = getStrapiMedia(data?.Logo?.url)
   return (
-    <div className="relative h-full w-full mb-36 md:mb-64 lg:mb-96">
+    <div className="relative mb-36 w-full h-full md:mb-64 lg:mb-96">
       <div className="">
         <CoverImageComp
           image_border={true}
