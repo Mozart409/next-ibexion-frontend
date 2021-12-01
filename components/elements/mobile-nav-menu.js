@@ -17,12 +17,21 @@ const MobileNavMenu = ({ navbar, closeSelf }) => {
         <div></div>
         {/* Company logo */}
         <div className="justify-self-center">
-          <CustomImage
-            media={navbar?.logo}
-            className="object-contain w-auto h-auto"
-            width={128}
-            height={64}
-          />{' '}
+          {navbar.logo ? (
+            <CustomImage
+              media={navbar?.logo}
+              className="object-contain w-auto h-auto"
+              width={128}
+              height={64}
+            />
+          ) : (
+            <CustomImage
+              media={navbar?.mobileLogo}
+              className="object-contain w-auto h-auto"
+              width={128}
+              height={64}
+            />
+          )}
         </div>
         {/* Close button */}
         <div className="justify-self-end">

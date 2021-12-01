@@ -35,12 +35,22 @@ const Navbar = ({ navbar }) => {
           <div className="justify-self-center">
             <Link href="/[[...slug]]" as="/">
               <a>
-                <CustomImage
-                  media={navbar?.logo}
-                  className="object-contain w-auto h-auto"
-                  width={128}
-                  height={64}
-                />
+                <div className="hidden md:block">
+                  <CustomImage
+                    media={navbar?.logo}
+                    className="hidden md:block object-contain w-auto h-auto"
+                    width={128}
+                    height={64}
+                  />
+                </div>
+                <div className="block md:hidden">
+                  <CustomImage
+                    media={navbar?.mobileLogo}
+                    className=" object-contain w-auto h-auto"
+                    width={128}
+                    height={64}
+                  />
+                </div>
               </a>
             </Link>
           </div>
