@@ -67,41 +67,75 @@ module.exports = {
       lg: '1024px',
       xl: '1280px',
     },
-    extend: {
-      typography: (theme) => ({
-        DEFAULT: {
-          css: {
-            color: theme('colors.canary-blue.300'),
-            strong: {
-              color: theme('colors.canary-blue.200'),
-            },
-            a: {
-              color: theme('colors.canary-blue.100'),
-              '&:hover': {
-                color: theme('colors.canary-blue.300'),
-              },
-            },
-            h1: {
-              color: theme('colors.canary-blue.100'),
-            },
-            h2: {
-              color: theme('colors.canary-blue.100'),
-            },
-            h3: {
-              color: theme('colors.canary-blue.200'),
-            },
-            h4: {
-              color: theme('colors.canary-blue.300'),
-            },
-            h5: {
-              color: theme('colors.canary-blue.300'),
-            },
-            h6: {
+    typography: (theme) => ({
+      DEFAULT: {
+        css: {
+          maxWidth: '85ch',
+          color: theme('colors.canary-blue.300'),
+          fontSize: theme('fontSize.paragraph'),
+          fontWeight: theme('fontWeight.paragraph'),
+          strong: {
+            color: theme('colors.canary-blue.200'),
+          },
+          a: {
+            color: theme('colors.canary-blue.100'),
+            fontSize: theme('fontSize.paragraph'),
+            fontWeight: theme('fontWeight.paragraph'),
+            '&:hover': {
               color: theme('colors.canary-blue.300'),
             },
           },
+          h1: {
+            color: theme('colors.canary-blue.100'),
+            fontSize: theme('fontSize.h1'),
+            fontWeight: theme('fontWeight.h1'),
+          },
+          h2: {
+            color: theme('colors.canary-blue.100'),
+            fontSize: theme('fontSize.h2'),
+            fontWeight: theme('fontWeight.h2'),
+          },
+          h3: {
+            color: theme('colors.canary-blue.200'),
+            fontSize: theme('fontSize.h3'),
+            fontWeight: theme('fontWeight.h3'),
+          },
+          h4: {
+            color: theme('colors.canary-blue.300'),
+            fontSize: theme('fontSize.h4'),
+            fontWeight: theme('fontWeight.h4'),
+          },
+          h5: {
+            color: theme('colors.canary-blue.300'),
+            fontSize: theme('fontSize.h4'),
+            fontWeight: theme('fontWeight.h4'),
+          },
+          h6: {
+            color: theme('colors.canary-blue.300'),
+            fontSize: theme('fontSize.h4'),
+            fontWeight: theme('fontWeight.h4'),
+          },
         },
-      }),
+      },
+    }),
+    extend: {
+      fontSize: {
+        h1: '60px',
+        h2: '40px',
+        h3: '34px',
+        h4: '26px',
+        paragraph: '20px',
+        small: '15px',
+      },
+      fontWeight: {
+        h1: '900',
+        h2: '700',
+        h3: '500',
+        h4: '500',
+        paragraph: '400',
+        small: '300',
+      },
+
       fontFamily: {
         sans: ['Fira Sans', ...defaultTheme.fontFamily.sans],
       },

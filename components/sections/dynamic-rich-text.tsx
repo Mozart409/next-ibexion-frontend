@@ -77,7 +77,7 @@ function DynamicRichText({ data }: Props): ReactElement {
                     {' '}
                   </Listbox.Label>
                   <div className="relative mt-1">
-                    <Listbox.Button className="relative py-2 pr-10 pl-3 w-full text-left bg-white rounded-md border border-gray-300 shadow-sm cursor-default sm:text-sm focus:ring-1 focus:outline-none focus:border-lava-orange focus:ring-lava-orange">
+                    <Listbox.Button className="relative py-2 pr-10 pl-3 w-full text-left bg-white rounded-md border border-gray-300 shadow-sm cursor-default sm:text-sm focus:ring-1 focus:outline-none focus:border-lava-orange-500 focus:ring-lava-orange-500">
                       <span className="block truncate">{selected.label}</span>
                       <span className="flex absolute inset-y-0 right-0 items-center pr-2 pointer-events-none">
                         <SelectorIcon
@@ -101,7 +101,7 @@ function DynamicRichText({ data }: Props): ReactElement {
                               className={({ active }) =>
                                 classNames(
                                   active
-                                    ? 'text-white bg-lava-orange'
+                                    ? 'text-white bg-lava-orange-500'
                                     : 'text-gray-900',
                                   'cursor-default select-none relative py-2 pl-3 pr-9'
                                 )
@@ -126,7 +126,7 @@ function DynamicRichText({ data }: Props): ReactElement {
                                       className={classNames(
                                         active
                                           ? 'text-white'
-                                          : 'text-lava-orange',
+                                          : 'text-lava-orange-500',
                                         'absolute inset-y-0 right-0 flex items-center pr-4'
                                       )}
                                     >

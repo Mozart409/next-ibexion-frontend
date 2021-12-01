@@ -27,17 +27,18 @@ const Button = ({
           },
           // Specific to when the button is fully dark
           {
-            'bg-lava-orange text-white border-lava-orange':
+            'bg-lava-orange-500 text-white border-lava-orange-500':
               appearance === 'dark',
           },
           // Specific to when the button is dark outlines
           {
-            'text-lava-orange border-lava-orange':
+            'text-lava-orange-500 border-lava-orange-500':
               appearance === 'dark-outline',
           },
           // Specific to when the button is fully white
           {
-            'bg-white text-lava-orange border-white': appearance === 'white',
+            'bg-white text-lava-orange-500 border-white':
+              appearance === 'white',
           },
           // Specific to when the button is white outlines
           {

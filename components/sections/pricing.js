@@ -17,7 +17,7 @@ const Pricing = ({ data }) => {
               },
               // Recommended plan
               {
-                'bg-lava-orange text-lava-orange border-lava-orange':
+                'bg-lava-orange-500 text-lava-orange-500 border-lava-orange-500':
                   plan.isRecommended,
               }
             )}
@@ -26,7 +26,7 @@ const Pricing = ({ data }) => {
             <h2 className="text-2xl">{plan.name}</h2>
             <p
               className={classNames('mt-4 text-lg', {
-                'text-lava-orange': plan.isRecommended,
+                'text-lava-orange-500': plan.isRecommended,
                 'text-gray-700': !plan.isRecommended,
               })}
             >

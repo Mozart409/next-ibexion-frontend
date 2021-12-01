@@ -76,7 +76,7 @@ const TestimonialsGroup = ({ data }) => {
                 'rounded-full h-3 w-3',
                 {
                   'bg-gray-500': index !== selectedTestimonialIndex,
-                  'bg-lava-orange': index === selectedTestimonialIndex,
+                  'bg-lava-orange-500': index === selectedTestimonialIndex,
                 }
               )}
               key={testimonial.id}
