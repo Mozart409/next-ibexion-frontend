@@ -20,13 +20,38 @@ module.exports = {
       white: colors.white,
       green: colors.green,
       primary: '#ffee00',
-      'lava-black': {
-        light: '#505050',
-        DEFAULT: '#373737',
-        dark: '#040204',
+      orange: {
+        100: '#ffaa28',
+        200: '#ffa01e',
+        300: '#ff9614',
+        400: '#FF8C0A',
+        500: '#FF8200',
       },
-      'canary-blue': '#1A75BB',
-      'lava-orange': '#FF8200',
+      'lava-black': {
+        100: '#E6E6E6',
+        200: '#CECECE',
+        300: '#B5B5B5',
+        400: '#9B9B9B',
+        500: '#828282',
+        600: '#686868',
+        700: '#505050',
+        800: '#373737',
+        900: '#040204',
+      },
+      'canary-blue': {
+        100: '#429de3',
+        200: '#3893d9',
+        300: '#2e89cf',
+        400: '#247fc5',
+        500: '#1A75BB',
+      },
+      'lava-orange': {
+        100: '#ffaa28',
+        200: '#ffa01e',
+        300: '#ff9614',
+        400: '#FF8C0A',
+        500: '#FF8200',
+      },
       'rubber-gray': '#161A1E',
       'colfo-gray': '#272F38',
       'gecko-gray': '#50545E',
@@ -46,33 +71,33 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            color: theme('colors.gray.300'),
+            color: theme('colors.canary-blue.300'),
             strong: {
-              color: theme('colors.gray.200'),
+              color: theme('colors.canary-blue.200'),
             },
             a: {
-              color: theme('colors.gray.100'),
+              color: theme('colors.canary-blue.100'),
               '&:hover': {
-                color: theme('colors.gray.300'),
+                color: theme('colors.canary-blue.300'),
               },
             },
             h1: {
-              color: theme('colors.gray.100'),
+              color: theme('colors.canary-blue.100'),
             },
             h2: {
-              color: theme('colors.gray.100'),
+              color: theme('colors.canary-blue.100'),
             },
             h3: {
-              color: theme('colors.gray.200'),
+              color: theme('colors.canary-blue.200'),
             },
             h4: {
-              color: theme('colors.gray.300'),
+              color: theme('colors.canary-blue.300'),
             },
             h5: {
-              color: theme('colors.gray.300'),
+              color: theme('colors.canary-blue.300'),
             },
             h6: {
-              color: theme('colors.gray.300'),
+              color: theme('colors.canary-blue.300'),
             },
           },
         },

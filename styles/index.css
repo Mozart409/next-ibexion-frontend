@@ -19,7 +19,7 @@ html {
 }
 
 .rich-text-hero a {
-  @apply text-canary-blue underline;
+  @apply text-canary-blue-500 underline;
 }
 
 .rich-text-banner {

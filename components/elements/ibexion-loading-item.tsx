@@ -20,7 +20,7 @@ function IbexionLoadingItem({ percent, label }: Props): ReactElement {
             <span
               className={cx(' text-center text-3xl font-black', {
                 'text-white': label === 'IBEXION',
-                'text-canary-blue': label !== 'IBEXION',
+                'text-canary-blue-500': label !== 'IBEXION',
               })}
             >
               {label}
