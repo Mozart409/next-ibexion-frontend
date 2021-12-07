@@ -5,7 +5,7 @@ import CustomLink from './custom-link'
 
 const Footer = ({ footer }) => {
   return (
-    <footer className="pt-10 bg-gray-800">
+    <footer className="pt-10 bg-gray-800 px-8 md:px-0">
       <div className="container flex flex-col md:flex-row md:justify-evenly lg:justify-between">
         <div>
           {footer.logo && (
