@@ -15,7 +15,7 @@ const Navbar = ({ navbar }) => {
   return (
     <>
       {/* The actual navbar */}
-      <nav className="py-6 bg-white border-b-2 border-gray-200 sm:py-2">
+      <nav className=" bg-white border-b-2 border-gray-200">
         <div className="container grid grid-cols-3 grid-flow-row justify-between items-center">
           {/* Content aligned to the left */}
           <div className="flex flex-row justify-self-start items-center">
