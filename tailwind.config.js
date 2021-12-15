@@ -1,17 +1,12 @@
 const colors = require('tailwindcss/colors')
 const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
-  purge: {
-    content: [
-      './pages/**/*.{js,ts,jsx,tsx}',
-      './components/**/*.{js,ts,jsx,tsx}',
-    ],
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+  ],
+  safelist: ['prose'],
 
-    options: {
-      safelist: ['prose'],
-    },
-  },
-  darkMode: false,
   theme: {
     colors: {
       transparent: 'transparent',
