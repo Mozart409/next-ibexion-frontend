@@ -119,7 +119,7 @@ module.exports = {
         h2: '40px',
         h3: '34px',
         h4: '26px',
-        paragraph: '20px',
+        paragraph: '18px',
         small: '15px',
       },
       fontWeight: {
