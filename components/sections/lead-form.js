@@ -54,7 +54,7 @@ const LeadForm = ({ data }) => {
 
               setLoading(false)
               setSubmitting(false)
-              toast.success('Nachricht gesendet')
+              toast.success('Message sent')
             }}
           >
             {({ errors, touched, isSubmitting }) => (
@@ -81,7 +81,7 @@ const LeadForm = ({ data }) => {
                     htmlFor="email"
                     className="block mt-2 text-sm font-medium text-left text-gray-700"
                   >
-                    E-Mail (notwendig)
+                    E-Mail (*)
                   </label>
                   <Field
                     className="block py-3 px-4 w-full rounded-md border-gray-300 shadow-sm focus:ring-lava-orange-500 focus:border-lava-orange-500"
@@ -97,7 +97,7 @@ const LeadForm = ({ data }) => {
                     htmlFor="tel"
                     className="block mt-2 text-sm font-medium text-left text-gray-700"
                   >
-                    Telefon
+                    Phone
                   </label>
                   <Field
                     className="block py-3 px-4 w-full rounded-md border-gray-300 shadow-sm focus:ring-lava-orange-500 focus:border-lava-orange-500"
@@ -113,7 +113,7 @@ const LeadForm = ({ data }) => {
                     htmlFor="subject"
                     className="block mt-2 text-sm font-medium text-left text-gray-700"
                   >
-                    Betreff
+                    Subject
                   </label>
                   <Field
                     className="block py-3 px-4 w-full rounded-md border-gray-300 shadow-sm focus:ring-lava-orange-500 focus:border-lava-orange-500"
@@ -154,7 +154,7 @@ const LeadForm = ({ data }) => {
                     htmlFor="message"
                     className="block mt-2 text-sm font-medium text-left text-gray-700"
                   >
-                    Nachricht (notwendig)
+                    Message (*)
                   </label>
                   <Field
                     className="block py-3 px-4 w-full rounded-md border-gray-300 shadow-sm focus:ring-lava-orange-500 focus:border-lava-orange-500"

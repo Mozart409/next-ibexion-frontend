@@ -23,11 +23,11 @@ const Footer = ({ footer }) => {
               key={footerColumn.id}
               className="mt-10 w-6/12 md:mt-0 md:w-auto"
             >
-              <p className="font-semibold tracking-wide text-gray-300 uppercase">
+              <p className="font-semibold tracking-wide text-gray-300 uppercase border-b-2 border-solid  border-lava-black-400">
                 {footerColumn.title}
               </p>
               <div className="flex flex-col">
-                <ul className="mt-2 divide-y-2 divide-solid md:divide-y-0 divide-gecko-gray">
+                <ul className="mt-2 ">
                   {footerColumn.links.map((link) => (
                     <li
                       key={link.id}
@@ -44,7 +44,7 @@ const Footer = ({ footer }) => {
           ))}
         </nav>
       </div>
-      <div className="py-6 text-sm text-gray-400 bg-gray-900">
+      <div className="py-6 text-sm text-gray-400 bg-gray-900 text-center rounded">
         <div className="container">
           {new Date().getFullYear()} {footer.smallText}
         </div>
