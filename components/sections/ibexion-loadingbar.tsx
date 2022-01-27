@@ -1,6 +1,8 @@
 import React, { ReactElement } from 'react'
 import IbexionLoadingItem from '../elements/ibexion-loading-item'
-
+import Image from 'next/image'
+import Loading from '../../public/images/loading.svg'
+import Loading2 from '../../public/images/loading2.svg'
 export interface Props {
   data: {
     component: string
@@ -18,14 +20,18 @@ export interface LoadingItem {
 
 function IbexionLoadingBar({ data }: Props): ReactElement {
   return (
-    <div className="bg-lava-black-900">
-      {data.Item.map((item) => (
+    <div className="bg-lava-black-900 my-96">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* <Loading className="w-full h-full" /> */}
+        <Image src={Loading2} alt="Ibexion Battery" />
+      </div>
+      {/*  {data.Item.map((item) => (
         <IbexionLoadingItem
           key={item.id}
           percent={item.percent}
           label={item.label}
         />
-      ))}
+      ))} */}
     </div>
   )
 }

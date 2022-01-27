@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="914" height="200" viewBox="0 0 914 200" clip-rule="evenodd" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5">
+    <style>
+@keyframes a0_f { 0% { fill: #272f38; } 1.111% { fill: #272f38; } 6.6% { fill: #1a75bb; } 100% { fill: #1a75bb; } }
+@keyframes a1_f { 0% { fill: #272f38; } 1.111% { fill: #272f38; } 6.6% { fill: #1a75bb; } 100% { fill: #1a75bb; } }
+@keyframes a2_f { 0% { fill: #272f38; } 12.1% { fill: #272f38; } 17.589% { fill: #1a75bb; } 100% { fill: #1a75bb; } }
+@keyframes a3_f { 0% { fill: #272f38; } 12.1% { fill: #272f38; } 17.589% { fill: #1a75bb; } 100% { fill: #1a75bb; } }
+@keyframes a4_f { 0% { fill: #272f38; } 23.089% { fill: #272f38; } 28.578% { fill: #1a75bb; } 100% { fill: #1a75bb; } }
+@keyframes a5_f { 0% { fill: #272f38; } 23.089% { fill: #272f38; } 28.578% { fill: #1a75bb; } 100% { fill: #1a75bb; } }
+@keyframes a6_f { 0% { fill: #272f38; } 34.078% { fill: #272f38; } 39.567% { fill: #1a75bb; } 100% { fill: #1a75bb; } }
+@keyframes a7_f { 0% { fill: #272f38; } 45.067% { fill: #272f38; } 50.556% { fill: #1a75bb; } 100% { fill: #1a75bb; } }
+@keyframes a8_f { 0% { fill: #272f38; } 56.056% { fill: #272f38; } 61.544% { fill: #1a75bb; } 100% { fill: #1a75bb; } }
+@keyframes a9_f { 0% { fill: #272f38; } 67.044% { fill: #272f38; } 72.533% { fill: #1a75bb; } 100% { fill: #1a75bb; } }
+@keyframes a10_f { 0% { fill: #272f38; } 78.033% { fill: #272f38; } 83.522% { fill: #1a75bb; } 100% { fill: #1a75bb; } }
+@keyframes a11_f { 0% { fill: #272f38; } 89.022% { fill: #272f38; } 94.511% { fill: #1a75bb; } 100% { fill: #1a75bb; } }
+@keyframes a12_f { 0% { fill: #272f38; } 6.6% { fill: #272f38; } 12.1% { fill: #1a75bb; } 100% { fill: #1a75bb; } }
+@keyframes a13_f { 0% { fill: #272f38; } 6.6% { fill: #272f38; } 12.1% { fill: #1a75bb; } 100% { fill: #1a75bb; } }
+@keyframes a14_f { 0% { fill: #272f38; } 17.589% { fill: #272f38; } 23.089% { fill: #1a75bb; } 100% { fill: #1a75bb; } }
+@keyframes a15_f { 0% { fill: #272f38; } 17.589% { fill: #272f38; } 23.089% { fill: #1a75bb; } 100% { fill: #1a75bb; } }
+@keyframes a16_f { 0% { fill: #272f38; } 28.578% { fill: #272f38; } 34.078% { fill: #1a75bb; } 100% { fill: #1a75bb; } }
+@keyframes a17_f { 0% { fill: #272f38; } 39.567% { fill: #272f38; } 45.067% { fill: #1a75bb; } 100% { fill: #1a75bb; } }
+@keyframes a18_f { 0% { fill: #272f38; } 50.556% { fill: #272f38; } 56.056% { fill: #1a75bb; } 100% { fill: #1a75bb; } }
+@keyframes a19_f { 0% { fill: #272f38; } 61.544% { fill: #272f38; } 67.044% { fill: #1a75bb; } 100% { fill: #1a75bb; } }
+@keyframes a20_f { 0% { fill: #272f38; } 72.533% { fill: #272f38; } 78.033% { fill: #1a75bb; } 100% { fill: #1a75bb; } }
+@keyframes a21_f { 0% { fill: #272f38; } 83.522% { fill: #272f38; } 89.022% { fill: #1a75bb; } 100% { fill: #1a75bb; } }
+@keyframes a22_f { 0% { fill: #272f38; } 94.511% { fill: #272f38; } 100% { fill: #1a75bb; } }
+@keyframes a23_v { 0% { visibility: hidden; animation-timing-function: steps(1); } 28.578% { visibility: visible; animation-timing-function: steps(1); } 100% { visibility: visible; animation-timing-function: steps(1); } }
+@keyframes a24_v { 0% { visibility: hidden; animation-timing-function: steps(1); } 23.089% { visibility: visible; animation-timing-function: steps(1); } 100% { visibility: visible; animation-timing-function: steps(1); } }
+@keyframes a25_v { 0% { visibility: hidden; animation-timing-function: steps(1); } 95.556% { visibility: visible; animation-timing-function: steps(1); } 100% { visibility: visible; animation-timing-function: steps(1); } }
+@keyframes a26_v { 0% { visibility: hidden; animation-timing-function: steps(1); } 28.578% { visibility: visible; animation-timing-function: steps(1); } 100% { visibility: visible; animation-timing-function: steps(1); } }
+@keyframes a27_v { 0% { visibility: hidden; animation-timing-function: steps(1); } 95.556% { visibility: visible; animation-timing-function: steps(1); } 100% { visibility: visible; animation-timing-function: steps(1); } }
+</style>
+    <rect width="3779.5" height="826.8" fill="#040204" />
+    <path d="M1039.3 125.6l119.7 204h-239.4l119.7-204Z" fill="#272f38" />
+    <path d="M1337.2 125.6l119.7 204h-239.3l119.6-204Z" fill="#272f38" />
+    <path d="M1635.2 125.6l119.6 204h-239.3l119.7-204Z" fill="#272f38" />
+    <path d="M1933.1 125.6l119.7 204h-239.4l119.7-204Z" fill="#272f38" />
+    <path d="M2231 125.6l119.7 204h-239.4l119.7-204Z" fill="#272f38" />
+    <path d="M2529 125.6l119.6 204h-239.3l119.7-204Z" fill="#272f38" />
+    <path d="M1008.8 123.9l-116.9 205.7l-119.7-207.3l236.6 1.6Z" fill="#272f38" />
+    <path d="M1306.7 123.9l-116.9 205.7l-119.7-207.3l236.6 1.6Z" fill="#272f38" />
+    <path d="M1604.6 123.9l-116.9 205.7l-119.6-207.3l236.5 1.6Z" fill="#272f38" />
+    <path d="M1902.6 123.9l-116.9 205.7l-119.7-207.3l236.6 1.6Z" fill="#272f38" />
+    <path d="M2200.5 123.9l-116.9 205.7l-119.7-207.3l236.6 1.6Z" fill="#272f38" />
+    <path d="M2498.4 123.9l-116.9 205.7l-119.6-207.3l236.5 1.6Z" fill="#272f38" />
+    <path d="M2796.4 123.9l-116.9 205.7l-119.7-207.3l236.6 1.6Z" fill="#272f38" />
+    <g transform="translate(25.8,125.6)">
+        <path d="M145.5 125.6l119.7 204h-239.4l119.7-204Z" fill="#272f38" transform="translate(-25.8,-125.6)" style="animation: 9s linear both a0_f;" />
+        <path d="M145.5 504.8l119.7 204.1h-239.4l119.7-204.1Z" fill="#272f38" transform="translate(-25.8,-125.6)" style="animation: 9s linear both a1_f;" />
+    </g>
+    <g transform="translate(323.8,125.6)">
+        <path d="M443.4 125.6l119.7 204h-239.3l119.6-204Z" fill="#272f38" transform="translate(-323.8,-125.6)" style="animation: 9s linear both a2_f;" />
+        <path d="M443.4 504.8l119.7 204.1h-239.3l119.6-204.1Z" fill="#272f38" transform="translate(-323.8,-125.6)" style="animation: 9s linear both a3_f;" />
+    </g>
+    <g transform="translate(621.7,125.6)">
+        <path d="M741.4 125.6l119.7 204h-239.4l119.7-204Z" fill="#272f38" transform="translate(-621.7,-125.6)" style="animation: 9s linear both a4_f;" />
+        <path d="M741.4 504.8l119.7 204.1h-239.4l119.7-204.1Z" fill="#272f38" transform="translate(-621.7,-125.6)" style="animation: 9s linear both a5_f;" />
+    </g>
+    <path d="M1039.3 504.8l119.7 204.1h-239.4l119.7-204.1Z" fill="#272f38" style="animation: 9s linear both a6_f;" />
+    <path d="M1337.2 504.8l119.7 204.1h-239.3l119.6-204.1Z" fill="#272f38" style="animation: 9s linear both a7_f;" />
+    <path d="M1635.2 504.8l119.6 204.1h-239.3l119.7-204.1Z" fill="#272f38" style="animation: 9s linear both a8_f;" />
+    <path d="M1933.1 504.8l119.7 204.1h-239.4l119.7-204.1Z" fill="#272f38" style="animation: 9s linear both a9_f;" />
+    <path d="M2231 504.8l119.7 204.1h-239.4l119.7-204.1Z" fill="#272f38" style="animation: 9s linear both a10_f;" />
+    <path d="M2529 504.8l119.6 204.1h-239.3l119.7-204.1Z" fill="#272f38" style="animation: 9s linear both a11_f;" />
+    <g transform="translate(176.4,122.3)">
+        <path d="M412.9 123.9l-116.9 205.7l-119.6-207.3l236.5 1.6Z" fill="#272f38" transform="translate(-176.4,-122.3)" style="animation: 9s linear both a12_f;" />
+        <path d="M412.9 503.2l-116.9 205.7l-119.6-207.3l236.5 1.6Z" fill="#272f38" transform="translate(-176.4,-122.3)" style="animation: 9s linear both a13_f;" />
+    </g>
+    <g transform="translate(474.3,122.3)">
+        <path d="M710.8 123.9l-116.8 205.7l-119.7-207.3l236.5 1.6Z" fill="#272f38" transform="translate(-474.3,-122.3)" style="animation: 9s linear both a14_f;" />
+        <path d="M710.8 503.2l-116.8 205.7l-119.7-207.3l236.5 1.6Z" fill="#272f38" transform="translate(-474.3,-122.3)" style="animation: 9s linear both a15_f;" />
+    </g>
+    <path d="M1008.8 503.2l-116.9 205.7l-119.7-207.3l236.6 1.6Z" fill="#272f38" style="animation: 9s linear both a16_f;" />
+    <path d="M1306.7 503.2l-116.9 205.7l-119.7-207.3l236.6 1.6Z" fill="#272f38" style="animation: 9s linear both a17_f;" />
+    <path d="M1604.6 503.2l-116.9 205.7l-119.6-207.3l236.5 1.6Z" fill="#272f38" style="animation: 9s linear both a18_f;" />
+    <path d="M1902.6 503.2l-116.9 205.7l-119.7-207.3l236.6 1.6Z" fill="#272f38" style="animation: 9s linear both a19_f;" />
+    <path d="M2200.5 503.2l-116.9 205.7l-119.7-207.3l236.6 1.6Z" fill="#272f38" style="animation: 9s linear both a20_f;" />
+    <path d="M2498.4 503.2l-116.9 205.7l-119.6-207.3l236.5 1.6Z" fill="#272f38" style="animation: 9s linear both a21_f;" />
+    <path d="M2796.4 503.2l-116.9 205.7l-119.7-207.3l236.6 1.6Z" fill="#272f38" style="animation: 9s linear both a22_f;" />
+    <g visibility="hidden" style="animation: 9s linear forwards a23_v;">
+        <g transform="translate(145.5,176.7)">
+            <path d="M0 81.8h47v17.8h21.3v-17.8h11.4v-19.9h-11.4v-61.9h-24.9l-43.4 59.1v22.7Zm22.1-19.9l24.9-34.1v34.1h-24.9Z" fill="#fff" fill-rule="nonzero" />
+            <path d="M87.5 86.1c2.7 3 5.9 5.6 9.6 7.8c6.2 4 15.6 7.9 28.1 7.9c22.8 0 37.8-15 37.8-34.2c0-19.3-14.3-33.4-34.9-33.4c-4.4 0-8 .8-10.4 1.8c-1.6 .4-2.8 1-3.8 1.7l.7-17.8h42v-19.9h-60.5l-3.6 58.4l15 2.1c1.1-1.4 2.5-2.7 4.1-3.8c2.7-2.2 6.7-4 12.2-4c10.8 0 17.1 6.4 17.1 14.9c0 8.6-6.4 15-17.8 15c-6.4 0-11.7-2.6-15.5-5.3c-2.1-1.6-4.1-3.4-5.8-5.4l-14.3 14.2Z" fill="#fff" fill-rule="nonzero" />
+            <path d="M208.5 99.6h21.3v-65.4l32.1 39.8l32-39.8v65.4h21.3v-99.6h-19.2l-34.1 42.7l-34.2-42.7h-19.2v99.6Z" fill="#fff" fill-rule="nonzero" />
+            <rect x="341.5" width="21.3" height="99.6" fill="#fff" fill-rule="nonzero" />
+            <path d="M389.2 99.6h21.4v-61.9l48.4 61.9h19.2v-99.6h-21.4v61.9l-48.4-61.9h-19.2v99.6Z" fill="#fff" fill-rule="nonzero" />
+            <path d="M497.4 89.7c0 6.4 5 11.4 11.4 11.4c6.4 0 11.3-5 11.3-11.4c0-6.4-4.9-11.4-11.3-11.4c-6.4 0-11.4 5-11.4 11.4Z" fill="#fff" fill-rule="nonzero" />
+        </g>
+    </g>
+    <g visibility="hidden" transform="translate(741,41.2)" style="animation: 9s linear forwards a24_v;">
+        <path d="M0 0v743.6" fill="none" stroke="#fff" stroke-width="9px" />
+        <path d="M2086.2 0v743.6" fill="none" stroke="#fff" stroke-width="9px" />
+    </g>
+    <g visibility="hidden" style="animation: 9s linear forwards a25_v;">
+        <path d="M2996.6 606.9c0-18.5 14.2-32.7 32.7-32.7c18.4 0 32.6 14.2 32.6 32.7c0 18.4-14.2 32.6-32.6 32.6c-18.5 0-32.7-14.2-32.7-32.6Zm-43.1 0c0 39.3 31.8 70.9 75.8 70.9c43.9 0 75.8-31.6 75.8-70.9c-0.1-39.4-31.9-71-75.8-71c-44 0-75.8 31.6-75.8 71Z" fill="#1a75bb" fill-rule="nonzero" />
+        <path d="M3142.5 674h43.2v-95h35.5v-39.3h-114.2v39.3h35.5v95Z" fill="#1a75bb" fill-rule="nonzero" />
+        <path d="M3235 674h43.1v-48.9h40.3v48.9h43.2v-134.3h-43.2v47h-40.3v-47h-43.1v134.3Z" fill="#1a75bb" fill-rule="nonzero" />
+        <path d="M3383.4 674h108.4v-35.5h-65.3v-16.3h48v-30.7h-48v-16.3h63.4v-35.5h-106.5v134.3Z" fill="#1a75bb" fill-rule="nonzero" />
+        <path d="M3508.1 674h43.2v-38.4h14.4l19.1 38.4h45.1l-25.9-48c3.9-2.3 7.3-5.1 10.6-8.8c5.2-6.1 10.5-15.5 10.5-29.5c0-26.9-21.1-48-50.8-48h-66.2v134.3Zm43.2-74.8v-23h18.2c7.7 0 12.5 4.8 12.5 11.5c0 6.7-4.8 11.5-12.5 11.5h-18.2Z" fill="#1a75bb" fill-rule="nonzero" />
+        <path d="M3633.8 654.8c4 4.4 9 8.3 14.5 11.5c9.8 6 23.6 11.5 42.1 11.5c34.5 0 55.6-21.1 55.6-44.1c0-43.2-60.4-40.5-60.4-55.6c0-3.9 3.8-6.7 11.5-6.7c6.7 0 11.5 2.5 15.1 4.8c2 1.3 3.7 3 5 4.8l25-25.9c-3.3-3.7-7.3-6.8-12.1-9.6c-8.3-4.8-20.4-9.6-37.8-9.6c-33.8 0-53.7 19.9-53.7 42.2c0 43.1 60.4 40.5 60.4 55.6c0 4.8-3.6 8.7-13.4 8.7c-7.7 0-14.4-3.1-19.2-6.8c-2.9-1.9-5.4-4.2-7.7-6.7l-24.9 25.9Z" fill="#1a75bb" fill-rule="nonzero" />
+    </g>
+    <g visibility="hidden" style="animation: 9s linear forwards a26_v;">
+        <rect x="2961.9" y="151.6" width="46.4" height="136.8" fill="#fff" fill-rule="nonzero" />
+        <path d="M3149 288.4h97.4v-36.1h-54.1v-18.6h40.9v-29.6h-40.9v-16.7h48.9v-35.8h-92.2v136.8Z" fill="#fff" fill-rule="nonzero" />
+        <path d="M3341.8 288.4h55.1l-49.3-71.9l43.8-64.9h-52.3l-20.7 35.9l-21.6-35.9h-55.5l46.4 65.5l-62 90.3c0 0 30.8-16.4 70.2-22.8c.3 .2 21.2-36.2 21.2-36.2l24.7 40Z" fill="#fff" fill-rule="nonzero" />
+        <rect x="3396.8" y="151.6" width="46.4" height="136.8" fill="#fff" fill-rule="nonzero" />
+        <path d="M3610.7 288.4h43.6l-1.9-65.3h.8l24.5 43.5l13.3 21.8h47v-136.8h-43.7l1.9 69.4h-0.7l-39.1-69.4h-45.7v136.8Z" fill="#fff" fill-rule="nonzero" />
+        <path d="M3116.2 216.7c6-2.3 10.9-5.8 14.6-10.6c3.6-4.8 5.5-10.8 5.5-18.2c0-7.8-1.8-14.2-5.3-19c-3.4-4.8-7.8-8.5-13.1-11c-5.3-2.5-11-4.2-17.3-5c-6.2-0.9-12.1-1.3-17.6-1.3h-56.3v136.8h62c6.7 0 13.3-0.7 19.7-2.1c6.3-1.3 12-3.6 17-6.7c4.9-3.2 8.9-7.3 11.9-12.4c3.1-5.1 4.6-11.3 4.6-18.8c0-4.3-0.7-8.1-2.2-11.6c-1.4-3.5-3.3-6.5-5.8-9.2c-2.4-2.6-5.2-4.8-8.3-6.5c-3.1-1.8-6.2-3-9.4-3.8v-0.6Zm-34.8 17c1.4 0 2.9 .1 4.5 .4c1.7 .3 3.2 .7 4.6 1.4c1.4 .8 2.6 1.7 3.6 2.8c.9 1.2 1.4 2.7 1.4 4.5c0 3.1-1.1 5.4-3.4 7c-2.2 1.6-5.2 2.5-8.8 2.5h-13.7v-18.6h11.8Zm-0.4-46.4c3.6 0 6.5 .7 8.7 2c2.2 1.3 3.3 3.2 3.3 5.8c0 3.1-1 5.4-3.1 6.8c-2.1 1.5-4.7 2.3-7.9 2.3h-12.4v-16.9h11.4Z" fill="#fff" fill-rule="nonzero" />
+        <path d="M3456.7 249.2c3.9 9 9.2 16.7 16 23c6.7 6.4 14.7 11.3 24 14.8c9.3 3.5 19.3 5.2 30.1 5.2c10.8 0 20.9-1.7 30.2-5.2c9.2-3.5 17.3-8.4 24.1-14.8c6.8-6.3 12.2-14 16-23c3.9-9.1 5.8-19 5.8-30c0-10.9-1.9-20.8-5.8-29.6c-3.8-8.8-9.2-16.4-16-22.5c-6.8-6.2-14.9-11-24.1-14.3c-9.3-3.4-19.4-5-30.2-5c-10.8 0-20.8 1.6-30.1 5c-9.3 3.3-17.3 8.1-24 14.3c-6.8 6.1-12.1 13.7-16 22.5c-3.8 8.8-5.8 18.7-5.8 29.6c0 11 2 20.9 5.8 30Zm45.1-42.7c1.4-3.6 3.2-6.7 5.6-9.2c2.4-2.5 5.3-4.4 8.6-5.8c3.4-1.4 7-2.1 10.8-2.1c3.9 .1 7.5 .8 10.8 2.3c3.2 1.4 6.1 3.4 8.5 5.9c2.5 2.6 4.4 5.7 5.7 9.3c1.4 3.7 2.1 7.8 2.1 12.1c0 4.5-0.7 8.7-2.1 12.4c-1.3 3.7-3.2 6.9-5.7 9.6c-2.4 2.7-5.3 4.7-8.5 6.2c-3.3 1.4-6.9 2.2-10.8 2.1c-3.8 0-7.4-0.8-10.8-2.3c-3.3-1.5-6.2-3.6-8.6-6.3c-2.4-2.8-4.2-6-5.6-9.7c-1.3-3.8-2-7.9-2-12.4c0-4.4 .7-8.4 2-12.1Z" fill="#fff" fill-rule="nonzero" />
+    </g>
+    <g visibility="hidden" style="animation: 9s linear forwards a27_v;">
+        <path d="M1504.1 655h21.4v-99.5h-17.8c-1.2 2.1-2.6 4.1-4.4 5.9c-3.3 3.3-8.3 6.6-16.2 7.6v13.5h17v72.5Z" fill="#fff" fill-rule="nonzero" />
+        <path d="M1582.3 612.4c9.3 0 15 5.5 15 12.8c0 7.2-5.7 12.8-15 12.8c-9.2 0-14.9-5.6-14.9-12.8c0-7.3 5.7-12.8 15-12.8Zm0-39.9c7.3 0 12.1 5 12.1 10.7c0 5.7-4.8 10.7-12 10.7c-7.3 0-12.1-5-12.1-10.7c0-5.7 4.8-10.7 12-10.7Zm0 84.6c22.8 0 37-14.2 37-30.5c0-9-4.1-15.1-8.2-19.1c-2.4-2.4-5.1-4.2-8.1-5.8c2.4-1.3 4.5-3 6.4-5c3.2-3.4 6.4-8.4 6.4-15.6c0-14.3-13.5-27.8-33.5-27.8c-19.9 0-33.4 13.5-33.4 27.8c0 7.2 3.2 12.2 6.4 15.6c1.9 2 4 3.7 6.4 5c-3 1.6-5.8 3.4-8.2 5.8c-4.1 4-8.1 10.1-8.1 19.1c0 16.3 14.2 30.5 36.9 30.5Z" fill="#fff" fill-rule="nonzero" />
+        <path d="M1676.2 637.2c-10.7 0-21.3-10.6-21.3-32c0-21.3 10.6-32 21.3-32c10.7 0 21.3 10.7 21.3 32c0 21.4-10.6 32-21.3 32Zm0 19.9c22.8 0 42.7-19.9 42.7-51.9c0-32-20-51.9-42.7-51.9c-22.8 0-42.7 19.9-42.7 51.9c0 32 20 51.9 42.7 51.9Z" fill="#fff" fill-rule="nonzero" />
+        <path d="M1770.1 655h21.3v-65.4l32 39.8l32-39.8v65.4h21.3v-99.5h-19.2l-34.1 42.6l-34.1-42.6h-19.2v99.5Z" fill="#fff" fill-rule="nonzero" />
+        <rect x="1903" y="555.5" width="21.3" height="99.5" fill="#fff" fill-rule="nonzero" />
+        <path d="M1950.7 655h21.3v-61.8l48.3 61.8h19.2v-99.5h-21.3v61.8l-48.3-61.8h-19.2v99.5Z" fill="#fff" fill-rule="nonzero" />
+        <path d="M2058.7 645.1c0 6.4 5 11.3 11.4 11.3c6.4 0 11.4-4.9 11.4-11.3c0-6.4-5-11.4-11.4-11.4c-6.4 0-11.4 5-11.4 11.4Z" fill="#fff" fill-rule="nonzero" />
+    </g>
+</svg>
