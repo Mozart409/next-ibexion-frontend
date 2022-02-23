@@ -1,4 +1,4 @@
-import React, { ReactElement, FC, useCallback, useEffect } from 'react'
+import React, { FC, ReactElement, useCallback, useEffect } from 'react'
 import { DropzoneOptions, useDropzone } from 'react-dropzone'
 import { useFormContext } from 'react-hook-form'
 

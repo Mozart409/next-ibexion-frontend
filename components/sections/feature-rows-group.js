@@ -1,7 +1,8 @@
 import classNames from 'classnames'
+
+import CustomLink from '../elements/custom-link'
 import CustomImage from '../elements/image'
 import Video from '../elements/video'
-import CustomLink from '../elements/custom-link'
 
 const FeatureRowsGroup = ({ data }) => {
   return (

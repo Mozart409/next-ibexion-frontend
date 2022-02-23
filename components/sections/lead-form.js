@@ -1,9 +1,10 @@
-import Button from '../elements/button'
+import { ErrorMessage,Field, Form, Formik } from 'formik'
 import { useState } from 'react'
+import toast from 'react-hot-toast'
 import { fetchAPI } from 'utils/api'
 import * as yup from 'yup'
-import { Formik, Form, Field, ErrorMessage } from 'formik'
-import toast from 'react-hot-toast'
+
+import Button from '../elements/button'
 
 const LeadForm = ({ data }) => {
   const [loading, setLoading] = useState(false)

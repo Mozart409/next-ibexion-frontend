@@ -1,7 +1,7 @@
-import { getStrapiMedia } from 'utils/media'
-import PropTypes from 'prop-types'
-import { mediaPropTypes } from 'utils/types'
 import Image from 'next/image'
+import PropTypes from 'prop-types'
+import { getStrapiMedia } from 'utils/media'
+import { mediaPropTypes } from 'utils/types'
 
 const CustomImage = ({ media, className, width, height }) => {
   const fullUrl = getStrapiMedia(media?.url)

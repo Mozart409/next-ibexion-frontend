@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types'
-import CustomImage from './image'
-import { mediaPropTypes, linkPropTypes, buttonLinkPropTypes } from 'utils/types'
-import ButtonLink from './button-link'
-import { useLockBodyScroll } from 'utils/hooks'
 import { getButtonAppearance } from 'utils/button'
+import { useLockBodyScroll } from 'utils/hooks'
+import { buttonLinkPropTypes,linkPropTypes, mediaPropTypes } from 'utils/types'
+
+import ButtonLink from './button-link'
 import CustomLink from './custom-link'
+import CustomImage from './image'
 
 const MobileNavMenu = ({ navbar, closeSelf }) => {
   // Prevent window scroll while mobile nav menu is open

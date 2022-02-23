@@ -1,10 +1,10 @@
 /* eslint-disable react/display-name */
-import Link, { LinkProps } from 'next/link'
-import ReactMarkdown from 'react-markdown'
-import slugify from 'slugify'
 import cx from 'classnames'
+import Link, { LinkProps } from 'next/link'
 import PropTypes from 'prop-types'
 import * as React from 'react'
+import ReactMarkdown from 'react-markdown'
+import slugify from 'slugify'
 
 const MarkdownRender = ({ children, white }) => {
   const customRender = {
@@ -25,7 +25,7 @@ const MarkdownRender = ({ children, white }) => {
         )
 
       return (
-        <a href={href} target="_blank" rel="noopener noreferrer" title={title}>
+        <a href={href} target='_blank' rel='noopener noreferrer' title={title}>
           {children}
         </a>
       )
@@ -102,9 +102,9 @@ const MarkdownRender = ({ children, white }) => {
 
   return (
     <ReactMarkdown
-      className="mx-auto text-white break-words prose prose-sm lg:prose-lg"
+      className='mx-auto text-white break-words prose prose-sm lg:prose-lg'
       skipHtml={true}
-      renderers={customRender}
+      components={customRender}
     >
       {children}
     </ReactMarkdown>

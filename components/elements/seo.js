@@ -1,5 +1,5 @@
-import { NextSeo } from 'next-seo'
 import Head from 'next/head'
+import { NextSeo } from 'next-seo'
 import PropTypes from 'prop-types'
 import { getStrapiMedia } from 'utils/media'
 import { mediaPropTypes } from 'utils/types'

@@ -1,8 +1,9 @@
+import Image from 'next/image'
 import React, { ReactElement } from 'react'
 import { getStrapiMedia } from 'utils/media'
-import CustomLink from '../elements/custom-link'
-import Image from 'next/image'
+
 import CoverImageComp from '../elements/cover-image-comp'
+import CustomLink from '../elements/custom-link'
 interface Props {
   data: Image
 }

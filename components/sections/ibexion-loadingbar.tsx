@@ -1,8 +1,9 @@
-import React, { ReactElement } from 'react'
-import IbexionLoadingItem from '../elements/ibexion-loading-item'
 import Image from 'next/image'
+import React, { ReactElement } from 'react'
+
 import Loading from '../../public/images/loading.svg'
 import Loading2 from '../../public/images/loading2.svg'
+import IbexionLoadingItem from '../elements/ibexion-loading-item'
 export interface Props {
   data: {
     component: string

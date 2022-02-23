@@ -1,5 +1,5 @@
-import MarkdownRender from 'utils/MarkdownRender'
 import classNames from 'classnames'
+import MarkdownRender from 'utils/MarkdownRender'
 
 const NotificationBanner = ({ data: { text, type }, closeSelf }) => {
   if (text)

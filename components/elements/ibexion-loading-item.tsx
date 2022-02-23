@@ -1,6 +1,6 @@
-import React, { ReactElement } from 'react'
 import ProgressBar from '@ramonak/react-progress-bar'
 import cx from 'classnames'
+import React, { ReactElement } from 'react'
 interface Props {
   percent: number
   label: string

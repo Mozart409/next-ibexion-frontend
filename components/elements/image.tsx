@@ -1,5 +1,5 @@
-import { getStrapiMedia } from 'utils/media'
 import Image from 'next/image'
+import { getStrapiMedia } from 'utils/media'
 
 interface CustomImageProps {
   media: IMedia

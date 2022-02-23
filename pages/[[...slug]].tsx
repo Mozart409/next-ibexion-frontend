@@ -1,7 +1,8 @@
-import { getStrapiURL, getPageData } from 'utils/api'
-import Sections from 'components/sections'
 import Seo from 'components/elements/seo'
+import Sections from 'components/sections'
 import { useRouter } from 'next/dist/client/router'
+import { getPageData,getStrapiURL } from 'utils/api'
+
 import Error from './_error'
 // The file is called [[...slug]].js because we're using Next's
 // optional catch all routes feature. See the related docs:

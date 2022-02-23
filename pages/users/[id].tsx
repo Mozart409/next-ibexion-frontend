@@ -1,5 +1,5 @@
+import { GetStaticPaths,GetStaticProps, NextPage } from 'next'
 import React from 'react'
-import { NextPage, GetStaticProps, GetStaticPaths } from 'next'
 
 const Id: NextPage<IdProps> = () => {
   return <div>Id</div>

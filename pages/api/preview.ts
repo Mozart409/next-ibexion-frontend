@@ -1,5 +1,5 @@
-import { getPageData } from 'utils/api'
 import { NextApiRequest, NextApiResponse } from 'next'
+import { getPageData } from 'utils/api'
 
 const preview = async (req: NextApiRequest, res: NextApiResponse) => {
   // Check the secret and next parameters

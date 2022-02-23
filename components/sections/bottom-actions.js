@@ -1,5 +1,6 @@
-import ButtonLink from '@/components/elements/button-link'
 import { getButtonAppearance } from 'utils/button'
+
+import ButtonLink from '@/components/elements/button-link'
 
 const BottomActions = ({ data }) => {
   return (

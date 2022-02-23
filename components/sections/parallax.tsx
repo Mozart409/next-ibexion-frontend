@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react'
 import { getStrapiMedia } from 'utils/media'
+
 import CoverImageComp from '../elements/cover-image-comp'
 import CoverImage from './cover-image'
 

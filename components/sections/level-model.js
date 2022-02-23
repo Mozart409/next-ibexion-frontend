@@ -1,6 +1,7 @@
-import MarkdownRender from 'utils/MarkdownRender'
-import LevelRow from '../elements/level-row'
 import PropTypes from 'prop-types'
+import MarkdownRender from 'utils/MarkdownRender'
+
+import LevelRow from '../elements/level-row'
 const LevelModel = ({ data }) => {
   return (
     <div>

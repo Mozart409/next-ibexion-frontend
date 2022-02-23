@@ -1,8 +1,9 @@
 import classNames from 'classnames'
 import { useState } from 'react'
-import CustomImage from '../elements/image'
-import CustomLink from '../elements/custom-link'
 import slugify from 'slugify'
+
+import CustomLink from '../elements/custom-link'
+import CustomImage from '../elements/image'
 
 const TestimonialsGroup = ({ data }) => {
   // Only show one testimonial at a time

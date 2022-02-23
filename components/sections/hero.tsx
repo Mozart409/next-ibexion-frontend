@@ -1,7 +1,8 @@
+import { getButtonAppearance } from 'utils/button'
 import MarkdownRender from 'utils/MarkdownRender'
+
 import ButtonLink from '../elements/button-link'
 import CustomImage from '../elements/image'
-import { getButtonAppearance } from 'utils/button'
 
 const Hero = ({ data }) => {
   return (
