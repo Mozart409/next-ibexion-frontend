@@ -2,18 +2,25 @@ import App from 'next/app'
 import Head from 'next/head'
 import ErrorPage from 'next/error'
 import { useRouter } from 'next/router'
-import { DefaultSeo } from 'next-seo'
+import { useState, useEffect } from 'react'
 import { getStrapiMedia } from 'utils/media'
-import { getStrapiURL, getGlobalData } from 'utils/api'
+import { getGlobalData } from 'utils/api'
 import Layout from 'components/layout'
 import toast, { Toaster } from 'react-hot-toast'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
+import { AmplifyProvider } from '@aws-amplify/ui-react'
+import '@aws-amplify/ui-react/styles.css' // default theme
+import { Auth, Hub } from 'aws-amplify'
 
 import 'styles/index.css'
 import 'public/fonts/fira/fira.css'
 
 const MyApp = ({ Component, pageProps }) => {
+  const [signedInUser, setSignedInUser] = useState(false)
+  useEffect(() => {
+    authListener()
+  })
   const queryClient = new QueryClient()
 
   // Prevent Next bug when it tries to render the [[...slug]] route
@@ -29,14 +36,31 @@ const MyApp = ({ Component, pageProps }) => {
   }
   const { metadata } = global
 
+  async function authListener() {
+    Hub.listen('auth', (data) => {
+      switch (data.payload.event) {
+        case 'signIn':
+          return setSignedInUser(true)
+        case 'signOut':
+          return setSignedInUser(false)
+      }
+    })
+    try {
+      await Auth.currentAuthenticatedUser()
+      setSignedInUser(true)
+    } catch (err) {
+      toast.error(err.message)
+    }
+  }
+
   return (
     <>
       {/* Favicon */}
       <Head>
-        <link rel="shortcut icon" href={getStrapiMedia(global?.favicon?.url)} />
-        <link rel="prefetch" href="/fonts/inter-var-latin.woff2" />
-        <link rel="prefetch" href="/fonts/fira/FiraSans-Bold.woff" />
-        <link rel="prefetch" href="/fonts/fira/FiraSans-Bold.woff2" />
+        <link rel='shortcut icon' href={getStrapiMedia(global?.favicon?.url)} />
+        <link rel='prefetch' href='/fonts/inter-var-latin.woff2' />
+        <link rel='prefetch' href='/fonts/fira/FiraSans-Bold.woff' />
+        <link rel='prefetch' href='/fonts/fira/FiraSans-Bold.woff2' />
       </Head>
       {/* Global site metadata */}
       {/* <DefaultSeo
@@ -58,14 +82,16 @@ const MyApp = ({ Component, pageProps }) => {
         }}
       /> */}
       {/* Display the content */}
-      <QueryClientProvider client={queryClient}>
-        <Layout global={global}>
-          <Component {...pageProps} />
-          <Toaster />
-        </Layout>
+      <AmplifyProvider>
+        <QueryClientProvider client={queryClient}>
+          <Layout global={global}>
+            <Component {...pageProps} />
+            <Toaster />
+          </Layout>
 
-        <ReactQueryDevtools initialIsOpen={false} />
-      </QueryClientProvider>
+          <ReactQueryDevtools initialIsOpen={false} />
+        </QueryClientProvider>
+      </AmplifyProvider>
     </>
   )
 }
