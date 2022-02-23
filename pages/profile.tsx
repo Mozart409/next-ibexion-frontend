@@ -1,34 +1,64 @@
-import { withAuthenticator } from '@aws-amplify/ui-react'
-import { Auth } from 'aws-amplify'
-import { useState, useEffect } from 'react'
+import { NextPage } from 'next'
+import type { Session } from 'next-auth'
+import { signIn, signOut, useSession } from 'next-auth/react'
 
-function Profile() {
-  const [user, setUser] = useState(null)
-  useEffect(() => {
-    checkUser()
-  }, [])
-  async function checkUser() {
-    const user = await Auth.currentAuthenticatedUser()
-    setUser(user)
-  }
-  if (!user) return null
+const Profile: NextPage = () => {
+  const { data: session, status } = useSession()
+  const loading = status === 'loading'
 
-  async function signOut() {
-    try {
-      await Auth.signOut()
-    } catch (error) {
-      console.log('error signing out: ', error)
-    }
-  }
+  /* if (loading) {
+    return <p className='font-bold text-white'>Loading...</p>
+  } */
 
   return (
     <div>
-      <h2>Profile</h2>
-      <h3>Username: {user.username}</h3>
-      <p>Email: {user.attributes.email}</p>
-      <button onClick={signOut}>Sign out</button>
+      <h1>Profile</h1>
+      <div>
+        {!session && (
+          <>
+            <span className='font-bold text-white'>You are not signed in</span>
+            <a
+              href={`/api/auth/signin`}
+              className='rounded px-4 py-2 bg-orange-500 text-white'
+              onClick={(e) => {
+                e.preventDefault()
+                signIn()
+              }}
+            >
+              Sign in
+            </a>
+          </>
+        )}
+      </div>
+      <div>
+        {session?.user && (
+          <>
+            {session.user.image && (
+              <span
+                style={{ backgroundImage: `url('${session.user.image}')` }}
+                className='rounded-full'
+              />
+            )}
+            <span className='font-bold text-white'>
+              <small>Signed in as</small>
+              <br />
+              <strong>{session.user.email ?? session.user.name}</strong>
+            </span>
+            <a
+              href={`/api/auth/signout`}
+              className='rounded px-4 py-2 bg-orange-500 text-white'
+              onClick={(e) => {
+                e.preventDefault()
+                signOut()
+              }}
+            >
+              Sign out
+            </a>
+          </>
+        )}
+      </div>
     </div>
   )
 }
 
-export default withAuthenticator(Profile)
+export default Profile

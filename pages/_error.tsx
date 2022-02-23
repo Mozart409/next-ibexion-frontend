@@ -1,5 +1,6 @@
-import CustomButton from '@/components/elements/custom-button'
 import Link from 'next/link'
+
+import CustomButton from '@/components/elements/custom-button'
 export default function Error({ statusCode }) {
   return (
     <div className="my-auto">
