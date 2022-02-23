@@ -1,5 +1,5 @@
-import { getSession } from 'next-auth/react'
 import type { NextApiRequest, NextApiResponse } from 'next'
+import { getSession } from 'next-auth/react'
 
 export default async function session(
   req: NextApiRequest,
