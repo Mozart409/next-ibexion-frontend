@@ -1,64 +1,30 @@
+import { Authenticator } from '@aws-amplify/ui-react'
 import { NextPage } from 'next'
-import type { Session } from 'next-auth'
-import { signIn, signOut, useSession } from 'next-auth/react'
+import React from 'react'
 
-const Profile: NextPage = () => {
-  const { data: session, status } = useSession()
-  const loading = status === 'loading'
+import Button from '@/components/elements/button'
 
-  /* if (loading) {
-    return <p className='font-bold text-white'>Loading...</p>
-  } */
-
+const Profile: NextPage<ProfileProps> = () => {
   return (
     <div>
       <h1>Profile</h1>
-      <div>
-        {!session && (
-          <>
-            <span className='font-bold text-white'>You are not signed in</span>
-            <a
-              href={`/api/auth/signin`}
-              className='rounded px-4 py-2 bg-orange-500 text-white'
-              onClick={(e) => {
-                e.preventDefault()
-                signIn()
-              }}
-            >
-              Sign in
-            </a>
-          </>
-        )}
-      </div>
-      <div>
-        {session?.user && (
-          <>
-            {session.user.image && (
-              <span
-                style={{ backgroundImage: `url('${session.user.image}')` }}
-                className='rounded-full'
-              />
-            )}
-            <span className='font-bold text-white'>
-              <small>Signed in as</small>
-              <br />
-              <strong>{session.user.email ?? session.user.name}</strong>
-            </span>
-            <a
-              href={`/api/auth/signout`}
-              className='rounded px-4 py-2 bg-orange-500 text-white'
-              onClick={(e) => {
-                e.preventDefault()
-                signOut()
-              }}
+      <Authenticator>
+        {({ signOut, user }) => (
+          <div className='text-white'>
+            <h1>Hello {user.username}</h1>
+            <button
+              onClick={signOut}
+              className='px-6 py-2 bg-lava-orange-500 text-white flex w-full justify-center lg:w-auto text-center uppercase tracking-wide font-semibold text-base md:text-sm border-2 rounded-md border-lava-orange-500'
             >
               Sign out
-            </a>
-          </>
+            </button>
+          </div>
         )}
-      </div>
+      </Authenticator>
     </div>
   )
 }
+
+type ProfileProps = {}
 
 export default Profile

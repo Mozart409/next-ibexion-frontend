@@ -15,6 +15,7 @@ let nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     domains: [
       'localhost',
+      'avatars.githubusercontent.com',
       'cms.ibexion.de',
       'ibexion-strapi-image-upload-bucket.s3.eu-central-1.amazonaws.com',
       'https://docker-strapi-ibexion.3iondl2h16bmc.eu-central-1.cs.amazonlightsail.com',

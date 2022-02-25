@@ -30,20 +30,6 @@ const Navbar = ({ navbar }) => {
                   </CustomLink>
                 </li>
               ))}
-              <li>
-                <Link href='/login'>
-                  <a>
-                    <div className='py-1 px-2 hover:text-gray-500'>Login</div>
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href='/profile'>
-                  <a>
-                    <div className='py-1 px-2 hover:text-gray-500'>Profile</div>
-                  </a>
-                </Link>
-              </li>
             </ul>
           </div>
           <div className='justify-self-center'>
@@ -90,15 +76,34 @@ const Navbar = ({ navbar }) => {
             </div>
           </button>
           {/* CTA button on desktop */}
-          {navbar.button && (
-            <div className='hidden justify-self-end md:block'>
-              <ButtonLink
-                button={navbar.button}
-                appearance={getButtonAppearance(navbar.button.type, 'light')}
-                compact
-              />
-            </div>
-          )}
+          <div className='flex flex-row justify-self-start items-center'>
+            {/* List of links on desktop */}
+            <ul className='hidden flex-row gap-4 items-baseline list-none md:flex'>
+              <li>
+                <Link href='/login'>
+                  <a>
+                    <div className='py-1 px-2 hover:text-gray-500'>Login</div>
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link href='/profile'>
+                  <a>
+                    <div className='py-1 px-2 hover:text-gray-500'>Profile</div>
+                  </a>
+                </Link>
+              </li>
+            </ul>
+            {navbar.button && (
+              <div className='hidden justify-self-end md:block ml-4'>
+                <ButtonLink
+                  button={navbar.button}
+                  appearance={getButtonAppearance(navbar.button.type, 'light')}
+                  compact
+                />
+              </div>
+            )}
+          </div>
         </div>
       </nav>
 

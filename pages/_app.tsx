@@ -1,18 +1,26 @@
 import 'styles/index.css'
 import 'public/fonts/fira/fira.css'
+import '@aws-amplify/ui-react/styles.css' // default theme
+import '@aws-amplify/ui-react/styles.css'
 
+import { AmplifyProvider } from '@aws-amplify/ui-react'
+import { Authenticator } from '@aws-amplify/ui-react'
+import { Amplify } from 'aws-amplify'
 import Layout from 'components/layout'
 import App from 'next/app'
 import ErrorPage from 'next/error'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import { SessionProvider } from 'next-auth/react'
 import { useEffect, useState } from 'react'
 import toast, { Toaster } from 'react-hot-toast'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
 import { getGlobalData } from 'utils/api'
 import { getStrapiMedia } from 'utils/media'
+
+import awsExports from '../aws-exports'
+//Amplify.configure(awsExports)
+Amplify.configure({ ...awsExports, ssr: true })
 
 export interface Global {
   id: number
@@ -133,9 +141,8 @@ const MyApp = ({ Component, pageProps: { session, ...pageProps } }) => {
         }}
       /> */}
       {/* Display the content */}
-      <SessionProvider session={session} refetchInterval={5 * 60}>
+      <AmplifyProvider>
         <QueryClientProvider client={queryClient}>
-          {console.log(pageProps)}
           <Layout global={global}>
             <Component {...pageProps} />
             <Toaster />
@@ -143,7 +150,7 @@ const MyApp = ({ Component, pageProps: { session, ...pageProps } }) => {
 
           <ReactQueryDevtools initialIsOpen={false} />
         </QueryClientProvider>
-      </SessionProvider>
+      </AmplifyProvider>
     </>
   )
 }
