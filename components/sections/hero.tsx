@@ -6,7 +6,7 @@ import CustomImage from '../elements/image'
 
 const Hero = ({ data }) => {
   return (
-    <main className="container grid grid-cols-4 grid-flow-row-dense gap-4 justify-between items-center py-12 px-4 rounded-b-md md:grid-cols-8 md:grid-flow-col bg-gecko-gray">
+    <div className="container grid grid-cols-4 grid-flow-row-dense gap-4 justify-between items-center py-12 px-4 rounded-b-md md:grid-cols-8 md:grid-flow-col bg-gecko-gray">
       {/* Left column for content */}
       <div className="col-span-4">
         {/* Hero section label */}
@@ -44,7 +44,7 @@ const Hero = ({ data }) => {
           className="object-contain flex-shrink-0 mt-6 w-full sm:w-3/12 md:mt-0 md:w-5/12"
         />
       </div>
-    </main>
+    </div>
   )
 }
 
